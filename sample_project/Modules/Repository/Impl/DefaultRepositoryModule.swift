@@ -12,9 +12,9 @@ class DefaultRepositoryModule {
     private var modules = [ObjectIdentifier:Module]()
     
     init() throws {
-        self.modules = [:
+        self.modules = [
             // TODO: register necessary modules here
-            //ObjectIdentifier(EntrypointModule.self): DefaultEntrypointModule(),
+            ObjectIdentifier(CryptoAssetsModule.self): DefaultCryptoAssetsModule(),
         ]
         
         try modules.values

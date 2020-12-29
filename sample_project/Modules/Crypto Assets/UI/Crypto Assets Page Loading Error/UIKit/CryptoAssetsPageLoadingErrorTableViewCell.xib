@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="83" id="d7D-bf-NSy" customClass="CryptoAssetsPageLoadingErrorTableViewCell" customModule="sample_project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="457" height="83"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d7D-bf-NSy" id="TQ8-6U-fVI">
+                <rect key="frame" x="0.0" y="0.0" width="457" height="83"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RTu-zH-EGc">
+                        <rect key="frame" x="20" y="26" width="417" height="31.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Error: Something went wrong" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Quo-4T-9lr">
+                                <rect key="frame" x="0.0" y="0.0" width="417" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap here to reload" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3TN-qY-0sE">
+                                <rect key="frame" x="0.0" y="17" width="417" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="RTu-zH-EGc" firstAttribute="leading" secondItem="TQ8-6U-fVI" secondAttribute="leadingMargin" id="Z7g-Z8-P8h"/>
+                    <constraint firstItem="RTu-zH-EGc" firstAttribute="centerY" secondItem="TQ8-6U-fVI" secondAttribute="centerY" id="c09-0Z-hOS"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="RTu-zH-EGc" secondAttribute="trailing" id="uWa-r2-OY5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="subtitleLabel" destination="3TN-qY-0sE" id="Nq6-aQ-USm"/>
+                <outlet property="titleLabel" destination="Quo-4T-9lr" id="MyS-W4-m95"/>
+            </connections>
+            <point key="canvasLocation" x="207" y="172"/>
+        </tableViewCell>
+    </objects>
+</document>

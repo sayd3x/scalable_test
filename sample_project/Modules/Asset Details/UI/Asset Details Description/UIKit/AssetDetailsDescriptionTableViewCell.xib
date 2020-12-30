@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="238" id="7gu-Dz-A3v" customClass="AssetDetailsDescriptionTableViewCell" customModule="sample_project" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="503" height="238"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7gu-Dz-A3v" id="fKj-EA-aLt">
+                <rect key="frame" x="0.0" y="0.0" width="503" height="238"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhg-WT-Zu1">
+                        <rect key="frame" x="0.0" y="44" width="503" height="150"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QRB-tn-DPK">
+                                <rect key="frame" x="8" y="0.0" width="487" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QRB-tn-DPK" firstAttribute="top" secondItem="dhg-WT-Zu1" secondAttribute="top" id="4eD-OP-VYe"/>
+                            <constraint firstAttribute="bottom" secondItem="QRB-tn-DPK" secondAttribute="bottom" id="Olm-pb-Dag"/>
+                            <constraint firstItem="QRB-tn-DPK" firstAttribute="leading" secondItem="dhg-WT-Zu1" secondAttribute="leadingMargin" id="Tog-So-dSe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QRB-tn-DPK" secondAttribute="trailing" id="doO-CA-SZX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dhg-WT-Zu1" firstAttribute="leading" secondItem="fKj-EA-aLt" secondAttribute="leading" id="1m6-Gh-sKf"/>
+                    <constraint firstAttribute="trailing" secondItem="dhg-WT-Zu1" secondAttribute="trailing" id="99Y-ZF-iWE"/>
+                    <constraint firstItem="dhg-WT-Zu1" firstAttribute="centerY" secondItem="fKj-EA-aLt" secondAttribute="centerY" id="MyK-ui-XF1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descriptionTextView" destination="QRB-tn-DPK" id="g60-6z-r6f"/>
+                <outlet property="intrinsicView" destination="dhg-WT-Zu1" id="K4o-8O-0EC"/>
+            </connections>
+            <point key="canvasLocation" x="189.13043478260872" y="196.875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

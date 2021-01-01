@@ -14,10 +14,3 @@ extension CryptoAssetsAssetViewModelSource {
                   inputPrice: asset.usdPrice?.shortPrice.map{ "$\($0)" })
     }
 }
-
-fileprivate extension Decimal {
-    var shortPrice: String? {
-        let formatter = NumberFormatter()
-        return formatter.string(from: self as NSDecimalNumber)
-    }
-}

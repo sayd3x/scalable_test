@@ -24,6 +24,9 @@
                     <constraint firstItem="Jlv-Da-7oU" firstAttribute="centerY" secondItem="KtS-Tu-NYE" secondAttribute="centerY" id="wPn-z1-bNb"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="activityIndicator" destination="Jlv-Da-7oU" id="gJO-4c-Vx9"/>
+            </connections>
             <point key="canvasLocation" x="-296.37681159420293" y="130.91517857142856"/>
         </tableViewCell>
     </objects>

@@ -62,9 +62,10 @@ class CryptoAssetsDefaultPresenter: CryptoAssetsPresenter.Rx {
                                                                         inputSubtitle: "Tap to refresh")
                 masterSource.lastItem.onNext(.pageLoadingError(model))
             })
-            .drive(onNext: { [unowned self] error in
-                self.router?.cryptoAssetsShowAlertWithError(error)
-            })
+//            .drive(onNext: { [unowned self] error in
+//                self.router?.cryptoAssetsShowAlertWithError(error)
+//            })
+            .drive()
             .disposed(by: disposeBag)
 
         masterSource.event

@@ -7,4 +7,6 @@
 
 import Foundation
 
-typealias AssetDetailsRoutes = AssetDetailsAlertRoute
+typealias AssetDetailsRoutes =
+    AssetDetailsAlertRoute &
+    AssetDetailsUrlRoute

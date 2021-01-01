@@ -24,6 +24,7 @@ extension DefaultCryptoAssetsModule: RootModule {
         router.setViewController(vc)
         let interactorsFactory = try self.cryptoAssetsCreateInteractorsFactory()
         router.cryptoAssetsInteractorsFactory = interactorsFactory
+        router.modulesRepository = self.modulesRepository
         
         // configure presenter
         let presenter = CryptoAssetsDefaultPresenter(interactor: try interactorsFactory.cryptoAssetsCreateInteractor())

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol AssetDetailsModule {
-    
+    func createAssetDetailsInteractorsFactory(assetId: String) throws -> AssetDetailsInteractorsFactory
 }

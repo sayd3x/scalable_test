@@ -5,8 +5,9 @@
 //  Created by Konstantin Dorogan on 30.12.2020.
 //
 
-import Foundation
+import UIKit
 
 class CryptoAssetsPageLoadingTableViewCell: TableViewCell, NibLoadableView {
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
 }

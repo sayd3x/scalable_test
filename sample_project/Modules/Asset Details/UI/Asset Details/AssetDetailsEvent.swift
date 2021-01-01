@@ -10,3 +10,14 @@ import Foundation
 enum AssetDetailsEvent {
     case selectedItem(_ value: AssetDetailsItem)
 }
+
+extension AssetDetailsEvent {
+    var selectedItem: AssetDetailsItem? {
+        switch self {
+        case .selectedItem(let value):
+            return value
+        default:
+            return nil
+        }
+    }
+}

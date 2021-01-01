@@ -8,11 +8,12 @@
 import Foundation
 
 struct CryptoAssetsDefaultInteractorsFactory {
-    
+    let repository: CryptoAssetsRepository
 }
 
 extension CryptoAssetsDefaultInteractorsFactory: CryptoAssetsInteractorsFactory {
     func cryptoAssetsCreateInteractor() throws -> CryptoAssetsInteractor {
-        return CryptoAssetsStubInteractor()
+        //return CryptoAssetsStubInteractor()
+        return CryptoAssetsRepositoryInteractor(repository: repository)
     }
 }

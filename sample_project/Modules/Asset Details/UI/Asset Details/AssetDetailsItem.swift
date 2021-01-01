@@ -11,3 +11,14 @@ enum AssetDetailsItem {
     case description(_ model: AssetDetailsDescriptionViewModel)
     case reference(_ url: String, _ model: AssetDetailsRefViewModel)
 }
+
+extension AssetDetailsItem {
+    var referenceUrl: String? {
+        switch self {
+        case .reference(let value, _):
+            return value
+        default:
+            return nil
+        }
+    }
+}

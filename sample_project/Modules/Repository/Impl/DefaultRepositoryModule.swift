@@ -15,6 +15,7 @@ class DefaultRepositoryModule {
         self.modules = [
             // TODO: register necessary modules here
             ObjectIdentifier(CryptoAssetsModule.self): DefaultCryptoAssetsModule(),
+            ObjectIdentifier(AssetDetailsModule.self): DefaultAssetDetailsModule(),
         ]
         
         try modules.values

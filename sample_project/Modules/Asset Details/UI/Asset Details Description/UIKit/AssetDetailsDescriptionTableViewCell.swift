@@ -9,11 +9,8 @@ import UIKit
 
 class AssetDetailsDescriptionTableViewCell: TableViewCell, NibLoadableView, PresenterCompatible {
     @IBOutlet var descriptionTextView: UITextView!
-    @IBOutlet var intrinsicView: UIView!
     
     let presenterConfigurator = PresenterConfigurator<AssetDetailsDescriptionViewModel, NoRouter>()
-    
-    override var intrinsicContentSize: CGSize { intrinsicView.bounds.size }
     
     override func didAttachViewModel() {
         super.didAttachViewModel()
@@ -21,6 +18,5 @@ class AssetDetailsDescriptionTableViewCell: TableViewCell, NibLoadableView, Pres
         descriptionTextView.text = viewModel?.inputDescription
         
         setNeedsLayout()
-        invalidateIntrinsicContentSize()
     }
 }

@@ -13,10 +13,18 @@
 		9D0C4A85259A4A0D00C51AE1 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 9D0C4A84259A4A0D00C51AE1 /* RxRelay */; };
 		9D0C4A87259A4A0D00C51AE1 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9D0C4A86259A4A0D00C51AE1 /* RxSwift */; };
 		9D0C4A89259A4A0D00C51AE1 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 9D0C4A88259A4A0D00C51AE1 /* RxDataSources */; };
+		9D260D1C259F62D8004CA7D0 /* MessariStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D260D1B259F62D8004CA7D0 /* MessariStatus.swift */; };
+		9D260D23259F62F9004CA7D0 /* MessariResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D260D22259F62F9004CA7D0 /* MessariResponse.swift */; };
 		9D2F1B2C259A2D4C00B2E75E /* CryptoAssetsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F1B2B259A2D4C00B2E75E /* CryptoAssetsModule.swift */; };
 		9D2F1B2E259A2D6400B2E75E /* CryptoAssetsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F1B2D259A2D6400B2E75E /* CryptoAssetsInteractor.swift */; };
 		9D2F1B32259A2D9500B2E75E /* CryptoAssetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F1B31259A2D9500B2E75E /* CryptoAssetsViewModel.swift */; };
 		9D543993259BA7FE00005730 /* CryptoAssetsAssetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D543992259BA7FE00005730 /* CryptoAssetsAssetTableViewCell.xib */; };
+		9D54399A259BADE700005730 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D543999259BADE700005730 /* ReusableView.swift */; };
+		9D54399F259BAF4600005730 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D54399E259BAF4600005730 /* NibLoadableView.swift */; };
+		9D5439A3259BAF6500005730 /* ReusableView+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5439A2259BAF6500005730 /* ReusableView+UIView.swift */; };
+		9D5439A7259BAF7900005730 /* NibLoadableView+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5439A6259BAF7900005730 /* NibLoadableView+UIView.swift */; };
+		9D5439AE259BB16E00005730 /* UITableView+NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5439AD259BB16E00005730 /* UITableView+NibLoadableView.swift */; };
+		9D5439B2259BB3FE00005730 /* UITableViewCell+ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5439B1259BB3FE00005730 /* UITableViewCell+ReusableView.swift */; };
 		9D5439B7259BB79E00005730 /* CryptoAssetsInteractorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5439B6259BB79E00005730 /* CryptoAssetsInteractorsFactory.swift */; };
 		9D5439BD259BB84800005730 /* CryptoAssetsStubInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5439BC259BB84800005730 /* CryptoAssetsStubInteractor.swift */; };
 		9D5439C1259BB96000005730 /* CryptoAssetsDefaultInteractorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5439C0259BB96000005730 /* CryptoAssetsDefaultInteractorsFactory.swift */; };
@@ -29,6 +37,21 @@
 		9D5439D9259BBF8500005730 /* AlertRoute+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5439D8259BBF8500005730 /* AlertRoute+UIViewController.swift */; };
 		9D5439DD259BBFC000005730 /* CryptoAssetsAlertRoute+AlertRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5439DC259BBFC000005730 /* CryptoAssetsAlertRoute+AlertRoute.swift */; };
 		9D5439E0259BC07200005730 /* DefaultCryptoAssetsModule+RootModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5439DF259BC07200005730 /* DefaultCryptoAssetsModule+RootModule.swift */; };
+		9D5898EA259D279500AFE412 /* AssetDetailsUrlRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5898E9259D279500AFE412 /* AssetDetailsUrlRoute.swift */; };
+		9D5898EE259D28A700AFE412 /* AssetDetailsInteractorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5898ED259D28A700AFE412 /* AssetDetailsInteractorsFactory.swift */; };
+		9D5898F2259D28F500AFE412 /* AssetDetailsMockedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5898F1259D28F500AFE412 /* AssetDetailsMockedInteractor.swift */; };
+		9D5898F5259D2A0300AFE412 /* AssetDetailsDefaultInteractorsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5898F4259D2A0300AFE412 /* AssetDetailsDefaultInteractorsFactory.swift */; };
+		9D5898F9259D2A5100AFE412 /* DefaultAssetDetailsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5898F8259D2A5100AFE412 /* DefaultAssetDetailsModule.swift */; };
+		9D589901259D2DC900AFE412 /* SegueSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D589900259D2DC900AFE412 /* SegueSender.swift */; };
+		9D589904259D2FB900AFE412 /* Router+SegueSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D589903259D2FB900AFE412 /* Router+SegueSender.swift */; };
+		9D589909259D308900AFE412 /* AssetDetailsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D589908259D308900AFE412 /* AssetDetailsRoute.swift */; };
+		9D58990C259D30D200AFE412 /* AssetDetailsRoute+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D58990B259D30D200AFE412 /* AssetDetailsRoute+UIViewController.swift */; };
+		9D589910259D331800AFE412 /* AssetDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D58990F259D331800AFE412 /* AssetDetailsRouter.swift */; };
+		9D589913259D337400AFE412 /* CryptoAssetsDetailsRoute+AssetDetailsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D589912259D337400AFE412 /* CryptoAssetsDetailsRoute+AssetDetailsRoute.swift */; };
+		9D589919259E3B9900AFE412 /* CryptoAssetsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D589918259E3B9900AFE412 /* CryptoAssetsRepository.swift */; };
+		9D58991D259E40B400AFE412 /* CryptoAssetsAssetObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D58991C259E40B400AFE412 /* CryptoAssetsAssetObject.swift */; };
+		9D589921259E411F00AFE412 /* CryptoAssetsMessariRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D589920259E411F00AFE412 /* CryptoAssetsMessariRepository.swift */; };
+		9D589924259E46EB00AFE412 /* CryptoAssetsMessariNetworkApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D589923259E46EB00AFE412 /* CryptoAssetsMessariNetworkApi.swift */; };
 		9D7F1BAD259BE2430030650F /* CryptoAssetsPageLoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7F1BAC259BE2430030650F /* CryptoAssetsPageLoadingTableViewCell.xib */; };
 		9D7F1BB0259BE24F0030650F /* CryptoAssetsPageLoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F1BAF259BE24F0030650F /* CryptoAssetsPageLoadingTableViewCell.swift */; };
 		9D7F1BB9259BE3070030650F /* CryptoAssetsPageLoadingErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F1BB8259BE3070030650F /* CryptoAssetsPageLoadingErrorViewModel.swift */; };
@@ -60,17 +83,6 @@
 		9D7F1C2C259D12B10030650F /* AssetDetailsTableViewHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7F1C2B259D12B10030650F /* AssetDetailsTableViewHeaderFooterView.xib */; };
 		9D85C874259A762D0058BFE6 /* NoRouterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D85C873259A762D0058BFE6 /* NoRouterPresenter.swift */; };
 		9D85C878259A76960058BFE6 /* NoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D85C877259A76960058BFE6 /* NoRouter.swift */; };
-		9DB165D725B2225700C90611 /* RxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB165D625B2225700C90611 /* RxViewController.swift */; };
-		9DB165DB25B2225F00C90611 /* SegueSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB165D925B2225F00C90611 /* SegueSender.swift */; };
-		9DB165DC25B2225F00C90611 /* Router+SegueSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB165DA25B2225F00C90611 /* Router+SegueSender.swift */; };
-		9DB165E825B2227100C90611 /* UITableView+NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB165E025B2227100C90611 /* UITableView+NibLoadableView.swift */; };
-		9DB165E925B2227100C90611 /* UITableView+CellDynamicHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB165E125B2227100C90611 /* UITableView+CellDynamicHeight.swift */; };
-		9DB165EA25B2227100C90611 /* ReusableView+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB165E225B2227100C90611 /* ReusableView+UIView.swift */; };
-		9DB165EB25B2227100C90611 /* UITableViewHeaderFooterView+ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB165E325B2227100C90611 /* UITableViewHeaderFooterView+ReusableView.swift */; };
-		9DB165EC25B2227100C90611 /* UITableViewCell+ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB165E425B2227100C90611 /* UITableViewCell+ReusableView.swift */; };
-		9DB165ED25B2227100C90611 /* NibLoadableView+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB165E525B2227100C90611 /* NibLoadableView+UIView.swift */; };
-		9DB165EE25B2227100C90611 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB165E625B2227100C90611 /* NibLoadableView.swift */; };
-		9DB165EF25B2227100C90611 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB165E725B2227100C90611 /* ReusableView.swift */; };
 		9DB98BFD259A515800DEE0DC /* CryptoAssetsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB98BFC259A515800DEE0DC /* CryptoAssetsEvent.swift */; };
 		9DB98C00259A516700DEE0DC /* CryptoAssetsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB98BFF259A516700DEE0DC /* CryptoAssetsItem.swift */; };
 		9DB98C04259A518A00DEE0DC /* CryptoAssetsAssetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB98C03259A518A00DEE0DC /* CryptoAssetsAssetViewModel.swift */; };
@@ -84,8 +96,21 @@
 		9DB98C22259A5C1F00DEE0DC /* CryptoAssetsAssetViewModelSource+CryptoAssetsAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB98C21259A5C1F00DEE0DC /* CryptoAssetsAssetViewModelSource+CryptoAssetsAsset.swift */; };
 		9DB98C25259A61E700DEE0DC /* CryptoAssets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DB98C24259A61E700DEE0DC /* CryptoAssets.storyboard */; };
 		9DB98C28259A61F800DEE0DC /* CryptoAssetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB98C27259A61F800DEE0DC /* CryptoAssetsViewController.swift */; };
+		9DB98C2D259A669300DEE0DC /* RxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB98C2C259A669300DEE0DC /* RxViewController.swift */; };
 		9DB98C31259A68C900DEE0DC /* CryptoAssetsAssetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB98C30259A68C900DEE0DC /* CryptoAssetsAssetTableViewCell.swift */; };
 		9DB98C35259A695200DEE0DC /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB98C34259A695200DEE0DC /* TableViewCell.swift */; };
+		9DC08082259F95190049D653 /* CryptoAssetsRepositoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC08081259F95190049D653 /* CryptoAssetsRepositoryInteractor.swift */; };
+		9DC08088259FA2090049D653 /* CryptoAssetsAsset+CryptoAssetsAssetObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC08087259FA2090049D653 /* CryptoAssetsAsset+CryptoAssetsAssetObject.swift */; };
+		9DC5B7D5259F7E4000590A6E /* MessariError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5B7D4259F7E4000590A6E /* MessariError.swift */; };
+		9DC6BDBA259D1581004210E0 /* UITableViewHeaderFooterView+ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC6BDB9259D1581004210E0 /* UITableViewHeaderFooterView+ReusableView.swift */; };
+		9DC6BDC1259D18E3004210E0 /* UITableView+CellDynamicHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC6BDC0259D18E3004210E0 /* UITableView+CellDynamicHeight.swift */; };
+		9DC6BDC4259D1D47004210E0 /* AssetDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC6BDC3259D1D47004210E0 /* AssetDetailsInteractor.swift */; };
+		9DC6BDC7259D1F5E004210E0 /* AssetDetailsAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC6BDC6259D1F5E004210E0 /* AssetDetailsAsset.swift */; };
+		9DC6BDCA259D2080004210E0 /* AssetDetailsTimeSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC6BDC9259D2080004210E0 /* AssetDetailsTimeSeries.swift */; };
+		9DC6BDCF259D2257004210E0 /* Decimal+ShortPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC6BDCE259D2257004210E0 /* Decimal+ShortPrice.swift */; };
+		9DE0BD19259F82AF000CE6A5 /* Response+MapMessariData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE0BD18259F82AF000CE6A5 /* Response+MapMessariData.swift */; };
+		9DE0BD1E259F8532000CE6A5 /* MessariData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE0BD1D259F8532000CE6A5 /* MessariData.swift */; };
+		9DE0BD22259F8CD5000CE6A5 /* CryptoAssetsMessariData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE0BD21259F8CD5000CE6A5 /* CryptoAssetsMessariData.swift */; };
 		9DEA0006259282860037F34D /* ModulesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA0005259282860037F34D /* ModulesRepository.swift */; };
 		9DEA000A259282C80037F34D /* RepositoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA0009259282C80037F34D /* RepositoryModule.swift */; };
 		9DEA000E259283480037F34D /* DefaultRepositoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA000D259283480037F34D /* DefaultRepositoryModule.swift */; };
@@ -114,10 +139,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D260D1B259F62D8004CA7D0 /* MessariStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessariStatus.swift; sourceTree = "<group>"; };
+		9D260D22259F62F9004CA7D0 /* MessariResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessariResponse.swift; sourceTree = "<group>"; };
 		9D2F1B2B259A2D4C00B2E75E /* CryptoAssetsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsModule.swift; sourceTree = "<group>"; };
 		9D2F1B2D259A2D6400B2E75E /* CryptoAssetsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsInteractor.swift; sourceTree = "<group>"; };
 		9D2F1B31259A2D9500B2E75E /* CryptoAssetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsViewModel.swift; sourceTree = "<group>"; };
 		9D543992259BA7FE00005730 /* CryptoAssetsAssetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CryptoAssetsAssetTableViewCell.xib; sourceTree = "<group>"; };
+		9D543999259BADE700005730 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		9D54399E259BAF4600005730 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		9D5439A2259BAF6500005730 /* ReusableView+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReusableView+UIView.swift"; sourceTree = "<group>"; };
+		9D5439A6259BAF7900005730 /* NibLoadableView+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NibLoadableView+UIView.swift"; sourceTree = "<group>"; };
+		9D5439AD259BB16E00005730 /* UITableView+NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+NibLoadableView.swift"; sourceTree = "<group>"; };
+		9D5439B1259BB3FE00005730 /* UITableViewCell+ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ReusableView.swift"; sourceTree = "<group>"; };
 		9D5439B6259BB79E00005730 /* CryptoAssetsInteractorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsInteractorsFactory.swift; sourceTree = "<group>"; };
 		9D5439BC259BB84800005730 /* CryptoAssetsStubInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsStubInteractor.swift; sourceTree = "<group>"; };
 		9D5439C0259BB96000005730 /* CryptoAssetsDefaultInteractorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsDefaultInteractorsFactory.swift; sourceTree = "<group>"; };
@@ -130,6 +163,21 @@
 		9D5439D8259BBF8500005730 /* AlertRoute+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertRoute+UIViewController.swift"; sourceTree = "<group>"; };
 		9D5439DC259BBFC000005730 /* CryptoAssetsAlertRoute+AlertRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CryptoAssetsAlertRoute+AlertRoute.swift"; sourceTree = "<group>"; };
 		9D5439DF259BC07200005730 /* DefaultCryptoAssetsModule+RootModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefaultCryptoAssetsModule+RootModule.swift"; sourceTree = "<group>"; };
+		9D5898E9259D279500AFE412 /* AssetDetailsUrlRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailsUrlRoute.swift; sourceTree = "<group>"; };
+		9D5898ED259D28A700AFE412 /* AssetDetailsInteractorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailsInteractorsFactory.swift; sourceTree = "<group>"; };
+		9D5898F1259D28F500AFE412 /* AssetDetailsMockedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailsMockedInteractor.swift; sourceTree = "<group>"; };
+		9D5898F4259D2A0300AFE412 /* AssetDetailsDefaultInteractorsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailsDefaultInteractorsFactory.swift; sourceTree = "<group>"; };
+		9D5898F8259D2A5100AFE412 /* DefaultAssetDetailsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAssetDetailsModule.swift; sourceTree = "<group>"; };
+		9D589900259D2DC900AFE412 /* SegueSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueSender.swift; sourceTree = "<group>"; };
+		9D589903259D2FB900AFE412 /* Router+SegueSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+SegueSender.swift"; sourceTree = "<group>"; };
+		9D589908259D308900AFE412 /* AssetDetailsRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailsRoute.swift; sourceTree = "<group>"; };
+		9D58990B259D30D200AFE412 /* AssetDetailsRoute+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AssetDetailsRoute+UIViewController.swift"; sourceTree = "<group>"; };
+		9D58990F259D331800AFE412 /* AssetDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailsRouter.swift; sourceTree = "<group>"; };
+		9D589912259D337400AFE412 /* CryptoAssetsDetailsRoute+AssetDetailsRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CryptoAssetsDetailsRoute+AssetDetailsRoute.swift"; sourceTree = "<group>"; };
+		9D589918259E3B9900AFE412 /* CryptoAssetsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsRepository.swift; sourceTree = "<group>"; };
+		9D58991C259E40B400AFE412 /* CryptoAssetsAssetObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsAssetObject.swift; sourceTree = "<group>"; };
+		9D589920259E411F00AFE412 /* CryptoAssetsMessariRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsMessariRepository.swift; sourceTree = "<group>"; };
+		9D589923259E46EB00AFE412 /* CryptoAssetsMessariNetworkApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsMessariNetworkApi.swift; sourceTree = "<group>"; };
 		9D7F1BAC259BE2430030650F /* CryptoAssetsPageLoadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CryptoAssetsPageLoadingTableViewCell.xib; sourceTree = "<group>"; };
 		9D7F1BAF259BE24F0030650F /* CryptoAssetsPageLoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsPageLoadingTableViewCell.swift; sourceTree = "<group>"; };
 		9D7F1BB8259BE3070030650F /* CryptoAssetsPageLoadingErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsPageLoadingErrorViewModel.swift; sourceTree = "<group>"; };
@@ -161,17 +209,6 @@
 		9D7F1C2B259D12B10030650F /* AssetDetailsTableViewHeaderFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssetDetailsTableViewHeaderFooterView.xib; sourceTree = "<group>"; };
 		9D85C873259A762D0058BFE6 /* NoRouterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRouterPresenter.swift; sourceTree = "<group>"; };
 		9D85C877259A76960058BFE6 /* NoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRouter.swift; sourceTree = "<group>"; };
-		9DB165D625B2225700C90611 /* RxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxViewController.swift; sourceTree = "<group>"; };
-		9DB165D925B2225F00C90611 /* SegueSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueSender.swift; sourceTree = "<group>"; };
-		9DB165DA25B2225F00C90611 /* Router+SegueSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Router+SegueSender.swift"; sourceTree = "<group>"; };
-		9DB165E025B2227100C90611 /* UITableView+NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+NibLoadableView.swift"; sourceTree = "<group>"; };
-		9DB165E125B2227100C90611 /* UITableView+CellDynamicHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+CellDynamicHeight.swift"; sourceTree = "<group>"; };
-		9DB165E225B2227100C90611 /* ReusableView+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReusableView+UIView.swift"; sourceTree = "<group>"; };
-		9DB165E325B2227100C90611 /* UITableViewHeaderFooterView+ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+ReusableView.swift"; sourceTree = "<group>"; };
-		9DB165E425B2227100C90611 /* UITableViewCell+ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ReusableView.swift"; sourceTree = "<group>"; };
-		9DB165E525B2227100C90611 /* NibLoadableView+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NibLoadableView+UIView.swift"; sourceTree = "<group>"; };
-		9DB165E625B2227100C90611 /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
-		9DB165E725B2227100C90611 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		9DB98BFC259A515800DEE0DC /* CryptoAssetsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsEvent.swift; sourceTree = "<group>"; };
 		9DB98BFF259A516700DEE0DC /* CryptoAssetsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsItem.swift; sourceTree = "<group>"; };
 		9DB98C03259A518A00DEE0DC /* CryptoAssetsAssetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsAssetViewModel.swift; sourceTree = "<group>"; };
@@ -185,8 +222,21 @@
 		9DB98C21259A5C1F00DEE0DC /* CryptoAssetsAssetViewModelSource+CryptoAssetsAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CryptoAssetsAssetViewModelSource+CryptoAssetsAsset.swift"; sourceTree = "<group>"; };
 		9DB98C24259A61E700DEE0DC /* CryptoAssets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CryptoAssets.storyboard; sourceTree = "<group>"; };
 		9DB98C27259A61F800DEE0DC /* CryptoAssetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsViewController.swift; sourceTree = "<group>"; };
+		9DB98C2C259A669300DEE0DC /* RxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxViewController.swift; sourceTree = "<group>"; };
 		9DB98C30259A68C900DEE0DC /* CryptoAssetsAssetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsAssetTableViewCell.swift; sourceTree = "<group>"; };
 		9DB98C34259A695200DEE0DC /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		9DC08081259F95190049D653 /* CryptoAssetsRepositoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsRepositoryInteractor.swift; sourceTree = "<group>"; };
+		9DC08087259FA2090049D653 /* CryptoAssetsAsset+CryptoAssetsAssetObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CryptoAssetsAsset+CryptoAssetsAssetObject.swift"; sourceTree = "<group>"; };
+		9DC5B7D4259F7E4000590A6E /* MessariError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessariError.swift; sourceTree = "<group>"; };
+		9DC6BDB9259D1581004210E0 /* UITableViewHeaderFooterView+ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+ReusableView.swift"; sourceTree = "<group>"; };
+		9DC6BDC0259D18E3004210E0 /* UITableView+CellDynamicHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+CellDynamicHeight.swift"; sourceTree = "<group>"; };
+		9DC6BDC3259D1D47004210E0 /* AssetDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailsInteractor.swift; sourceTree = "<group>"; };
+		9DC6BDC6259D1F5E004210E0 /* AssetDetailsAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailsAsset.swift; sourceTree = "<group>"; };
+		9DC6BDC9259D2080004210E0 /* AssetDetailsTimeSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailsTimeSeries.swift; sourceTree = "<group>"; };
+		9DC6BDCE259D2257004210E0 /* Decimal+ShortPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+ShortPrice.swift"; sourceTree = "<group>"; };
+		9DE0BD18259F82AF000CE6A5 /* Response+MapMessariData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response+MapMessariData.swift"; sourceTree = "<group>"; };
+		9DE0BD1D259F8532000CE6A5 /* MessariData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessariData.swift; sourceTree = "<group>"; };
+		9DE0BD21259F8CD5000CE6A5 /* CryptoAssetsMessariData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsMessariData.swift; sourceTree = "<group>"; };
 		9DEA0005259282860037F34D /* ModulesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesRepository.swift; sourceTree = "<group>"; };
 		9DEA0009259282C80037F34D /* RepositoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModule.swift; sourceTree = "<group>"; };
 		9DEA000D259283480037F34D /* DefaultRepositoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRepositoryModule.swift; sourceTree = "<group>"; };
@@ -240,10 +290,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9D260D15259F5710004CA7D0 /* Network API */ = {
+			isa = PBXGroup;
+			children = (
+				9D260D16259F5719004CA7D0 /* Messari */,
+			);
+			path = "Network API";
+			sourceTree = "<group>";
+		};
+		9D260D16259F5719004CA7D0 /* Messari */ = {
+			isa = PBXGroup;
+			children = (
+				9D260D2C259F63B0004CA7D0 /* Moya */,
+				9DC5B7D4259F7E4000590A6E /* MessariError.swift */,
+				9D260D1B259F62D8004CA7D0 /* MessariStatus.swift */,
+				9D260D22259F62F9004CA7D0 /* MessariResponse.swift */,
+				9DE0BD1D259F8532000CE6A5 /* MessariData.swift */,
+			);
+			path = Messari;
+			sourceTree = "<group>";
+		};
+		9D260D2C259F63B0004CA7D0 /* Moya */ = {
+			isa = PBXGroup;
+			children = (
+				9DE0BD18259F82AF000CE6A5 /* Response+MapMessariData.swift */,
+			);
+			path = Moya;
+			sourceTree = "<group>";
+		};
 		9D2F1B28259A2C7E00B2E75E /* Crypto Assets */ = {
 			isa = PBXGroup;
 			children = (
 				9D2F1B2A259A2D3900B2E75E /* Module */,
+				9D589917259E3B6F00AFE412 /* Repository */,
 				9D2F1B29259A2D3000B2E75E /* Interactor */,
 				9D2F1B2F259A2D7000B2E75E /* UI */,
 			);
@@ -253,6 +332,7 @@
 		9D2F1B29259A2D3000B2E75E /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				9DC08086259FA1F10049D653 /* Messari */,
 				9D5439BB259BB83500005730 /* Impl */,
 				9DB98C19259A577900DEE0DC /* CryptoAssetsAsset.swift */,
 				9D2F1B2D259A2D6400B2E75E /* CryptoAssetsInteractor.swift */,
@@ -302,10 +382,34 @@
 		9D543997259BAD9B00005730 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9DB165DE25B2227100C90611 /* Dynamic TableView */,
 				9D5439D2259BBF6300005730 /* MVVM */,
+				9D543998259BADB000005730 /* UI */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9D543998259BADB000005730 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9DC6BDCD259D2234004210E0 /* Foundation */,
+				9D5439A1259BAF5500005730 /* UIKit */,
+				9D543999259BADE700005730 /* ReusableView.swift */,
+				9D54399E259BAF4600005730 /* NibLoadableView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9D5439A1259BAF5500005730 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				9D5439A2259BAF6500005730 /* ReusableView+UIView.swift */,
+				9D5439A6259BAF7900005730 /* NibLoadableView+UIView.swift */,
+				9DC6BDB9259D1581004210E0 /* UITableViewHeaderFooterView+ReusableView.swift */,
+				9D5439B1259BB3FE00005730 /* UITableViewCell+ReusableView.swift */,
+				9D5439AD259BB16E00005730 /* UITableView+NibLoadableView.swift */,
+				9DC6BDC0259D18E3004210E0 /* UITableView+CellDynamicHeight.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		9D5439BA259BB82F00005730 /* Impl */ = {
@@ -321,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				9D5439BC259BB84800005730 /* CryptoAssetsStubInteractor.swift */,
+				9DC08081259F95190049D653 /* CryptoAssetsRepositoryInteractor.swift */,
 			);
 			path = Impl;
 			sourceTree = "<group>";
@@ -348,6 +453,33 @@
 				9D5439DF259BC07200005730 /* DefaultCryptoAssetsModule+RootModule.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		9D5898EC259D280000AFE412 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				9D5898F1259D28F500AFE412 /* AssetDetailsMockedInteractor.swift */,
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
+		9D5898F7259D2A0800AFE412 /* Impl */ = {
+			isa = PBXGroup;
+			children = (
+				9D5898F8259D2A5100AFE412 /* DefaultAssetDetailsModule.swift */,
+				9D5898F4259D2A0300AFE412 /* AssetDetailsDefaultInteractorsFactory.swift */,
+			);
+			path = Impl;
+			sourceTree = "<group>";
+		};
+		9D589917259E3B6F00AFE412 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				9DE0BD20259F8CAE000CE6A5 /* Messari */,
+				9D58991C259E40B400AFE412 /* CryptoAssetsAssetObject.swift */,
+				9D589918259E3B9900AFE412 /* CryptoAssetsRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		9D7F1BAA259BE2100030650F /* Crypto Assets Page Loading */ = {
@@ -407,7 +539,9 @@
 		9D7F1BC8259BEF480030650F /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				9D5898F7259D2A0800AFE412 /* Impl */,
 				9D7F1BC9259BEF540030650F /* AssetDetailsModule.swift */,
+				9D5898ED259D28A700AFE412 /* AssetDetailsInteractorsFactory.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -427,6 +561,10 @@
 		9D7F1BCE259BEF650030650F /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				9D5898EC259D280000AFE412 /* Impl */,
+				9DC6BDC6259D1F5E004210E0 /* AssetDetailsAsset.swift */,
+				9DC6BDC9259D2080004210E0 /* AssetDetailsTimeSeries.swift */,
+				9DC6BDC3259D1D47004210E0 /* AssetDetailsInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -442,6 +580,7 @@
 				9D7F1BE1259CF5110030650F /* AssetDetailsPresenter.swift */,
 				9D7F1BE4259CF5230030650F /* AssetDetailsRoutes.swift */,
 				9D7F1BE7259CF5350030650F /* AssetDetailsAlertRoute.swift */,
+				9D5898E9259D279500AFE412 /* AssetDetailsUrlRoute.swift */,
 			);
 			path = "Asset Details";
 			sourceTree = "<group>";
@@ -451,6 +590,9 @@
 			children = (
 				9D7F1BEA259CF5AA0030650F /* AssetDetailsViewController.swift */,
 				9D7F1BED259CF5DB0030650F /* AssetDetails.storyboard */,
+				9D589908259D308900AFE412 /* AssetDetailsRoute.swift */,
+				9D58990B259D30D200AFE412 /* AssetDetailsRoute+UIViewController.swift */,
+				9D58990F259D331800AFE412 /* AssetDetailsRouter.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -551,29 +693,6 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		9DB165DE25B2227100C90611 /* Dynamic TableView */ = {
-			isa = PBXGroup;
-			children = (
-				9DB165DF25B2227100C90611 /* UIKit */,
-				9DB165E625B2227100C90611 /* NibLoadableView.swift */,
-				9DB165E725B2227100C90611 /* ReusableView.swift */,
-			);
-			path = "Dynamic TableView";
-			sourceTree = "<group>";
-		};
-		9DB165DF25B2227100C90611 /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				9DB165E025B2227100C90611 /* UITableView+NibLoadableView.swift */,
-				9DB165E125B2227100C90611 /* UITableView+CellDynamicHeight.swift */,
-				9DB165E225B2227100C90611 /* ReusableView+UIView.swift */,
-				9DB165E325B2227100C90611 /* UITableViewHeaderFooterView+ReusableView.swift */,
-				9DB165E425B2227100C90611 /* UITableViewCell+ReusableView.swift */,
-				9DB165E525B2227100C90611 /* NibLoadableView+UIView.swift */,
-			);
-			path = UIKit;
-			sourceTree = "<group>";
-		};
 		9DB98C02259A517A00DEE0DC /* Crypto Assets Asset */ = {
 			isa = PBXGroup;
 			children = (
@@ -591,6 +710,7 @@
 				9DB98C27259A61F800DEE0DC /* CryptoAssetsViewController.swift */,
 				9D5439C6259BBCC300005730 /* CryptoAssetsRouter.swift */,
 				9D5439DC259BBFC000005730 /* CryptoAssetsAlertRoute+AlertRoute.swift */,
+				9D589912259D337400AFE412 /* CryptoAssetsDetailsRoute+AssetDetailsRoute.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -606,7 +726,6 @@
 		9DB98C15259A55C900DEE0DC /* Rx */ = {
 			isa = PBXGroup;
 			children = (
-				9DB165D625B2225700C90611 /* RxViewController.swift */,
 				9DB98C16259A560B00DEE0DC /* BasePresenter+Rx.swift */,
 			);
 			path = Rx;
@@ -628,6 +747,32 @@
 				9D543992259BA7FE00005730 /* CryptoAssetsAssetTableViewCell.xib */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		9DC08086259FA1F10049D653 /* Messari */ = {
+			isa = PBXGroup;
+			children = (
+				9DC08087259FA2090049D653 /* CryptoAssetsAsset+CryptoAssetsAssetObject.swift */,
+			);
+			path = Messari;
+			sourceTree = "<group>";
+		};
+		9DC6BDCD259D2234004210E0 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				9DC6BDCE259D2257004210E0 /* Decimal+ShortPrice.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		9DE0BD20259F8CAE000CE6A5 /* Messari */ = {
+			isa = PBXGroup;
+			children = (
+				9DE0BD21259F8CD5000CE6A5 /* CryptoAssetsMessariData.swift */,
+				9D589923259E46EB00AFE412 /* CryptoAssetsMessariNetworkApi.swift */,
+				9D589920259E411F00AFE412 /* CryptoAssetsMessariRepository.swift */,
+			);
+			path = Messari;
 			sourceTree = "<group>";
 		};
 		9DEA00012592820F0037F34D /* Modules */ = {
@@ -735,6 +880,7 @@
 		9DEAFF8225923CEB0037F34D /* sample_project */ = {
 			isa = PBXGroup;
 			children = (
+				9D260D15259F5710004CA7D0 /* Network API */,
 				9DEAFF9925923D340037F34D /* MVVM */,
 				9D543997259BAD9B00005730 /* Extensions */,
 				9DEAFFF62592801B0037F34D /* Module */,
@@ -765,12 +911,13 @@
 		9DEAFFE4259275E70037F34D /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				9DB165DA25B2225F00C90611 /* Router+SegueSender.swift */,
-				9DB165D925B2225F00C90611 /* SegueSender.swift */,
+				9D589900259D2DC900AFE412 /* SegueSender.swift */,
 				9DEAFFE5259275FD0037F34D /* ViewController.swift */,
+				9DB98C2C259A669300DEE0DC /* RxViewController.swift */,
 				9DEAFFEB259276740037F34D /* View.swift */,
 				9DB98C34259A695200DEE0DC /* TableViewCell.swift */,
 				9DEAFFF325927F8C0037F34D /* UIKitRouter.swift */,
+				9D589903259D2FB900AFE412 /* Router+SegueSender.swift */,
 				9D7F1C25259D124D0030650F /* TableViewHeaderFooterView.swift */,
 			);
 			path = UIKit;
@@ -878,46 +1025,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DB165E825B2227100C90611 /* UITableView+NibLoadableView.swift in Sources */,
 				9DEAFFE6259275FD0037F34D /* ViewController.swift in Sources */,
 				9D7F1C1B259D064D0030650F /* AssetDetailsDescriptionViewModelSource.swift in Sources */,
-				9DB165ED25B2227100C90611 /* NibLoadableView+UIView.swift in Sources */,
-				9DB165EC25B2227100C90611 /* UITableViewCell+ReusableView.swift in Sources */,
 				9D7F1C29259D127E0030650F /* AssetDetailsTableViewHeaderFooterView.swift in Sources */,
-				9DB165E925B2227100C90611 /* UITableView+CellDynamicHeight.swift in Sources */,
 				9DB98C28259A61F800DEE0DC /* CryptoAssetsViewController.swift in Sources */,
 				9DB98C0A259A528B00DEE0DC /* CryptoAssetsRoutes.swift in Sources */,
 				9D2F1B2C259A2D4C00B2E75E /* CryptoAssetsModule.swift in Sources */,
 				9D7F1BE5259CF5230030650F /* AssetDetailsRoutes.swift in Sources */,
 				9DB98C0D259A52EB00DEE0DC /* CryptoAssetsPresenter.swift in Sources */,
-				9DB165EA25B2227100C90611 /* ReusableView+UIView.swift in Sources */,
+				9DC08082259F95190049D653 /* CryptoAssetsRepositoryInteractor.swift in Sources */,
+				9D5898F9259D2A5100AFE412 /* DefaultAssetDetailsModule.swift in Sources */,
+				9D5439B2259BB3FE00005730 /* UITableViewCell+ReusableView.swift in Sources */,
 				9D7F1BC2259BE3720030650F /* CryptoAssetsPageLoadingErrorTableViewCell.swift in Sources */,
+				9D260D23259F62F9004CA7D0 /* MessariResponse.swift in Sources */,
 				9DEAFFFC2592803B0037F34D /* UIModule.swift in Sources */,
 				9D7F1BD6259CF4C80030650F /* AssetDetailsItem.swift in Sources */,
 				9DEAFFEC259276740037F34D /* View.swift in Sources */,
+				9D5439A7259BAF7900005730 /* NibLoadableView+UIView.swift in Sources */,
+				9D589924259E46EB00AFE412 /* CryptoAssetsMessariNetworkApi.swift in Sources */,
+				9D589921259E411F00AFE412 /* CryptoAssetsMessariRepository.swift in Sources */,
 				9D85C878259A76960058BFE6 /* NoRouter.swift in Sources */,
 				9D7F1C09259CFE9A0030650F /* AssetDetailsRefViewModelSource.swift in Sources */,
+				9DC6BDC1259D18E3004210E0 /* UITableView+CellDynamicHeight.swift in Sources */,
 				9D7F1C0E259CFECB0030650F /* AssetDetailsRefTableViewCell.swift in Sources */,
 				9DB98C13259A536F00DEE0DC /* CryptoAssetsDefaultPresenter.swift in Sources */,
 				9D5439C7259BBCC300005730 /* CryptoAssetsRouter.swift in Sources */,
 				9D5439DD259BBFC000005730 /* CryptoAssetsAlertRoute+AlertRoute.swift in Sources */,
+				9D58990C259D30D200AFE412 /* AssetDetailsRoute+UIViewController.swift in Sources */,
+				9D260D1C259F62D8004CA7D0 /* MessariStatus.swift in Sources */,
+				9D58991D259E40B400AFE412 /* CryptoAssetsAssetObject.swift in Sources */,
 				9DEAFFDA259258D30037F34D /* PresenterConfiguration.swift in Sources */,
 				9D5439D9259BBF8500005730 /* AlertRoute+UIViewController.swift in Sources */,
+				9DC6BDC7259D1F5E004210E0 /* AssetDetailsAsset.swift in Sources */,
 				9DEA000E259283480037F34D /* DefaultRepositoryModule.swift in Sources */,
+				9DE0BD22259F8CD5000CE6A5 /* CryptoAssetsMessariData.swift in Sources */,
 				9D7F1BBE259BE34C0030650F /* CryptoAssetsPageLoadingErrorViewModelSource.swift in Sources */,
 				9DB98C04259A518A00DEE0DC /* CryptoAssetsAssetViewModel.swift in Sources */,
 				9D2F1B2E259A2D6400B2E75E /* CryptoAssetsInteractor.swift in Sources */,
+				9DC5B7D5259F7E4000590A6E /* MessariError.swift in Sources */,
 				9DEAFFFF259280490037F34D /* RootModule.swift in Sources */,
 				9D5439BD259BB84800005730 /* CryptoAssetsStubInteractor.swift in Sources */,
+				9D5898EE259D28A700AFE412 /* AssetDetailsInteractorsFactory.swift in Sources */,
 				9DB98C1E259A595200DEE0DC /* CryptoAssetsAssetViewModelSource.swift in Sources */,
-				9DB165DB25B2225F00C90611 /* SegueSender.swift in Sources */,
 				9DEA0027259292030037F34D /* LoadingScreenRouter.swift in Sources */,
-				9DB165DC25B2225F00C90611 /* Router+SegueSender.swift in Sources */,
+				9DC08088259FA2090049D653 /* CryptoAssetsAsset+CryptoAssetsAssetObject.swift in Sources */,
+				9D54399F259BAF4600005730 /* NibLoadableView.swift in Sources */,
 				9D85C874259A762D0058BFE6 /* NoRouterPresenter.swift in Sources */,
 				9DEA001F25928D640037F34D /* LoadingScreenViewController.swift in Sources */,
 				9D7F1BB9259BE3070030650F /* CryptoAssetsPageLoadingErrorViewModel.swift in Sources */,
-				9DB165EB25B2227100C90611 /* UITableViewHeaderFooterView+ReusableView.swift in Sources */,
 				9D7F1BDE259CF5060030650F /* AssetDetailsDefaultPresenter.swift in Sources */,
+				9DE0BD19259F82AF000CE6A5 /* Response+MapMessariData.swift in Sources */,
+				9DE0BD1E259F8532000CE6A5 /* MessariData.swift in Sources */,
 				9D5439E0259BC07200005730 /* DefaultCryptoAssetsModule+RootModule.swift in Sources */,
 				9DB98C22259A5C1F00DEE0DC /* CryptoAssetsAssetViewModelSource+CryptoAssetsAsset.swift in Sources */,
 				9D5439CA259BBD0400005730 /* CryptoAssetsAlertRoute.swift in Sources */,
@@ -930,7 +1088,9 @@
 				9DB98BFD259A515800DEE0DC /* CryptoAssetsEvent.swift in Sources */,
 				9DEAFF8425923CEB0037F34D /* AppDelegate.swift in Sources */,
 				9D5439B7259BB79E00005730 /* CryptoAssetsInteractorsFactory.swift in Sources */,
+				9DB98C2D259A669300DEE0DC /* RxViewController.swift in Sources */,
 				9DEA000A259282C80037F34D /* RepositoryModule.swift in Sources */,
+				9D54399A259BADE700005730 /* ReusableView.swift in Sources */,
 				9DB98C17259A560B00DEE0DC /* BasePresenter+Rx.swift in Sources */,
 				9D7F1BF8259CF9820030650F /* AssetDetailsRefViewModel.swift in Sources */,
 				9D7F1BB0259BE24F0030650F /* CryptoAssetsPageLoadingTableViewCell.swift in Sources */,
@@ -942,29 +1102,41 @@
 				9D7F1C17259D06240030650F /* AssetDetailsDescriptionViewModel.swift in Sources */,
 				9D7F1BD3259CF42E0030650F /* AssetDetailsViewModel.swift in Sources */,
 				9DEA0033259293F50037F34D /* LoadingScreenMainRoute+RootModuleRoutable.swift in Sources */,
-				9DB165EE25B2227100C90611 /* NibLoadableView.swift in Sources */,
+				9DC6BDC4259D1D47004210E0 /* AssetDetailsInteractor.swift in Sources */,
 				9DB98C1A259A577900DEE0DC /* CryptoAssetsAsset.swift in Sources */,
-				9DB165EF25B2227100C90611 /* ReusableView.swift in Sources */,
 				9DEAFFCA259240000037F34D /* PresenterCompatible.swift in Sources */,
 				9D5439CD259BBD3500005730 /* CryptoAssetsRoutable.swift in Sources */,
+				9DC6BDCF259D2257004210E0 /* Decimal+ShortPrice.swift in Sources */,
 				9DEAFFE125925C210037F34D /* PresenterConfigurator.swift in Sources */,
+				9D5898F5259D2A0300AFE412 /* AssetDetailsDefaultInteractorsFactory.swift in Sources */,
+				9D5898EA259D279500AFE412 /* AssetDetailsUrlRoute.swift in Sources */,
 				9DB98C07259A527800DEE0DC /* CryptoAssetsDetailsRoute.swift in Sources */,
 				9DEA002E259292B80037F34D /* LoadingScreenMainRoute.swift in Sources */,
 				9D7F1BE2259CF5110030650F /* AssetDetailsPresenter.swift in Sources */,
 				9D7F1BE8259CF5350030650F /* AssetDetailsAlertRoute.swift in Sources */,
+				9D5439A3259BAF6500005730 /* ReusableView+UIView.swift in Sources */,
+				9DC6BDBA259D1581004210E0 /* UITableViewHeaderFooterView+ReusableView.swift in Sources */,
 				9DEAFFF82592802D0037F34D /* Module.swift in Sources */,
 				9D5439D0259BBDD700005730 /* ModulesRepositoryRoutable.swift in Sources */,
+				9D589919259E3B9900AFE412 /* CryptoAssetsRepository.swift in Sources */,
 				9D2F1B32259A2D9500B2E75E /* CryptoAssetsViewModel.swift in Sources */,
+				9D589909259D308900AFE412 /* AssetDetailsRoute.swift in Sources */,
 				9DEA002225928F7B0037F34D /* RootModuleRoutable.swift in Sources */,
-				9DB165D725B2225700C90611 /* RxViewController.swift in Sources */,
+				9D589901259D2DC900AFE412 /* SegueSender.swift in Sources */,
 				9D7F1C26259D124D0030650F /* TableViewHeaderFooterView.swift in Sources */,
 				9DEAFFF425927F8C0037F34D /* UIKitRouter.swift in Sources */,
 				9D5439C4259BB99F00005730 /* DefaultCryptoAssetsModule.swift in Sources */,
 				9D7F1BF5259CF8630030650F /* AssetDetailsHeaderViewModel.swift in Sources */,
+				9D589904259D2FB900AFE412 /* Router+SegueSender.swift in Sources */,
+				9D5898F2259D28F500AFE412 /* AssetDetailsMockedInteractor.swift in Sources */,
+				9D5439AE259BB16E00005730 /* UITableView+NibLoadableView.swift in Sources */,
+				9D589910259D331800AFE412 /* AssetDetailsRouter.swift in Sources */,
+				9DC6BDCA259D2080004210E0 /* AssetDetailsTimeSeries.swift in Sources */,
 				9D5439D4259BBF6B00005730 /* AlertRoute.swift in Sources */,
 				9D7F1BD9259CF4DA0030650F /* AssetDetailsEvent.swift in Sources */,
 				9D7F1BFC259CFA260030650F /* AssetDetailsHeaderViewModelSource.swift in Sources */,
 				9DEAFFD7259255DF0037F34D /* Presentable.swift in Sources */,
+				9D589913259D337400AFE412 /* CryptoAssetsDetailsRoute+AssetDetailsRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

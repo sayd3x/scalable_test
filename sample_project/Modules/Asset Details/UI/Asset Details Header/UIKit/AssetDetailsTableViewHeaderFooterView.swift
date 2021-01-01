@@ -8,14 +8,11 @@
 import UIKit
 
 class AssetDetailsTableViewHeaderFooterView: TableViewHeaderFooterView, NibLoadableView, PresenterCompatible {
-    @IBOutlet var intrinsicView: UIView!
     @IBOutlet var subtitleLabel: UILabel!
     @IBOutlet var priceLabel: UILabel!
     @IBOutlet var shortDescriptionLabel: UILabel!
     
     let presenterConfigurator = PresenterConfigurator<AssetDetailsHeaderViewModel, NoRouter>()
-    
-    override var intrinsicContentSize: CGSize { intrinsicView.bounds.size }
     
     override func didAttachViewModel() {
         super.didAttachViewModel()
@@ -25,6 +22,5 @@ class AssetDetailsTableViewHeaderFooterView: TableViewHeaderFooterView, NibLoada
         shortDescriptionLabel.text = viewModel?.inputShortDescription
         
         setNeedsLayout()
-        invalidateIntrinsicContentSize()
     }
 }

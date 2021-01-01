@@ -32,11 +32,22 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="usN-PP-Wni" id="kZD-gW-bd7"/>
+                        <segue destination="8hq-ng-gEY" kind="show" identifier="toAssetDetailsVC" id="c2y-HK-jNP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4rb-Id-gaX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-349" y="106"/>
+        </scene>
+        <!--AssetDetails-->
+        <scene sceneID="Yeb-MI-XEb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AssetDetails" id="8hq-ng-gEY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="yVX-WU-6wJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bfC-ol-vaC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-712" y="439"/>
         </scene>
     </scenes>
     <resources>

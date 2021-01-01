@@ -53,8 +53,10 @@ class CryptoAssetsViewController: RxViewController, PresenterCompatible {
                     cell.attachViewModel(model)
                     return cell
                 case .pageLoading:
-                    return tableView.dequeueReusableCell(CryptoAssetsPageLoadingTableViewCell.self,
+                    let cell = tableView.dequeueReusableCell(CryptoAssetsPageLoadingTableViewCell.self,
                                                              forIndexPath: IndexPath(row: row, section: 0))
+                    cell.activityIndicator.startAnimating()
+                    return cell
                 case .pageLoadingTrigger:
                     return UITableViewCell()
                 }

@@ -11,6 +11,7 @@ final class CryptoAssetsRouter: UIKitRouter<CryptoAssetsViewController>,
                                 ModulesRepositoryRoutable,
                                 CryptoAssetsRoutable,
                                 AlertRoute,
+                                AssetDetailsRoute,
                                 CryptoAssetsRoutes {
     
     var modulesRepository: ModulesRepository?

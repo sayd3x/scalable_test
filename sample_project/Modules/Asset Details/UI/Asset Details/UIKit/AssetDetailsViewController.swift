@@ -12,7 +12,6 @@ import RxCocoa
 class AssetDetailsViewController: RxViewController, PresenterCompatible {
     @IBOutlet var tableView: UITableView!
     
-    private let cellStore = TableViewCellStore()
     private let headerModel = BehaviorRelay<AssetDetailsHeaderViewModel?>(value: nil)
     let presenterConfigurator = PresenterConfigurator<AssetDetailsViewModel, AssetDetailsRoutes>()
     
@@ -28,7 +27,10 @@ class AssetDetailsViewController: RxViewController, PresenterCompatible {
     }
     
     private func configureNavigationBar() {
-        navigationItem.title = viewModel?.inputTitle
+        viewModel?.inputTitle
+            .drive(navigationItem.rx.title)
+            .disposed(by: disposeBag)
+        
         navigationItem.backButtonTitle = ""
     }
     
@@ -81,8 +83,7 @@ extension AssetDetailsViewController: UITableViewDelegate {
         
         switch item {
         case .description(let model):
-            return tableView.heightOfCell(AssetDetailsDescriptionTableViewCell.self,
-                                          fromStore: cellStore,
+            return tableView.heightOf(AssetDetailsDescriptionTableViewCell.self,
                                           forModel: model)
         case .reference:
             return 44
@@ -100,13 +101,16 @@ extension AssetDetailsViewController: UITableViewDelegate {
         return view
     }
     
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         guard let model = headerModel.value, section == 0 else {
             return 0
         }
-        
-        return tableView.heightOfCell(AssetDetailsTableViewHeaderFooterView.self,
-                                      fromStore: cellStore,
+
+        return tableView.heightOf(AssetDetailsTableViewHeaderFooterView.self,
                                       forModel: model)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 1
     }
 }

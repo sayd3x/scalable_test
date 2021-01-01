@@ -13,56 +13,52 @@
             <rect key="frame" x="0.0" y="0.0" width="496" height="323"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeP-Xu-wJN">
-                    <rect key="frame" x="0.0" y="127.5" width="496" height="68"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="INf-Nm-4Dx">
+                    <rect key="frame" x="0.0" y="0.0" width="496" height="323"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Dxd-Kj-cUL">
+                    <rect key="frame" x="20" y="5" width="456" height="313"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Dxd-Kj-cUL">
-                            <rect key="frame" x="20" y="8" width="456" height="52"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZo-2g-im6">
+                            <rect key="frame" x="0.0" y="0.0" width="456" height="20.5"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZo-2g-im6">
-                                    <rect key="frame" x="0.0" y="0.0" width="456" height="20.5"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATg-Fg-cxg">
-                                            <rect key="frame" x="0.0" y="0.0" width="55" height="20.5"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$27000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5K-gU-YOE">
-                                            <rect key="frame" x="55" y="0.0" width="401" height="20.5"/>
-                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="decentralized cryptocurrency decentralized cryptocurrency decentralized cryptocurrency decentralized cryptocurrency" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fe9-Vn-m6J">
-                                    <rect key="frame" x="0.0" y="25.5" width="456" height="26.5"/>
-                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Bitcoin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATg-Fg-cxg">
+                                    <rect key="frame" x="0.0" y="0.0" width="55" height="20.5"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$27000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5K-gU-YOE">
+                                    <rect key="frame" x="55" y="0.0" width="401" height="20.5"/>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                         </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="decentralized cryptocurrency decentralized cryptocurrency decentralized cryptocurrency decentralized cryptocurrency" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fe9-Vn-m6J">
+                            <rect key="frame" x="0.0" y="25.5" width="456" height="287.5"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="trailingMargin" secondItem="Dxd-Kj-cUL" secondAttribute="trailing" id="TEu-nH-5l3"/>
-                        <constraint firstItem="Dxd-Kj-cUL" firstAttribute="top" secondItem="aeP-Xu-wJN" secondAttribute="topMargin" id="Xjh-7q-yEc"/>
-                        <constraint firstAttribute="bottomMargin" secondItem="Dxd-Kj-cUL" secondAttribute="bottom" id="kYy-z8-dT7"/>
-                        <constraint firstItem="Dxd-Kj-cUL" firstAttribute="leading" secondItem="aeP-Xu-wJN" secondAttribute="leadingMargin" id="rwe-F9-EBs"/>
-                    </constraints>
-                </view>
+                </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="aeP-Xu-wJN" firstAttribute="centerY" secondItem="nyQ-Nm-9Fo" secondAttribute="centerY" id="3FH-NB-uf2"/>
-                <constraint firstItem="aeP-Xu-wJN" firstAttribute="leading" secondItem="nyQ-Nm-9Fo" secondAttribute="leading" id="l6c-1v-FST"/>
-                <constraint firstAttribute="trailing" secondItem="aeP-Xu-wJN" secondAttribute="trailing" id="od3-Vw-Oit"/>
+                <constraint firstItem="INf-Nm-4Dx" firstAttribute="leading" secondItem="nyQ-Nm-9Fo" secondAttribute="leading" id="1Dr-5X-a61"/>
+                <constraint firstItem="Dxd-Kj-cUL" firstAttribute="top" secondItem="nyQ-Nm-9Fo" secondAttribute="top" constant="5" id="6QX-kw-QRk"/>
+                <constraint firstAttribute="bottom" secondItem="INf-Nm-4Dx" secondAttribute="bottom" id="LqZ-8U-BCD"/>
+                <constraint firstItem="Dxd-Kj-cUL" firstAttribute="leading" secondItem="nyQ-Nm-9Fo" secondAttribute="leadingMargin" id="WhN-9D-c5b"/>
+                <constraint firstAttribute="trailing" secondItem="INf-Nm-4Dx" secondAttribute="trailing" id="c6Y-iz-KWa"/>
+                <constraint firstItem="INf-Nm-4Dx" firstAttribute="top" secondItem="nyQ-Nm-9Fo" secondAttribute="top" id="dlc-zZ-bOG"/>
+                <constraint firstAttribute="trailingMargin" secondItem="Dxd-Kj-cUL" secondAttribute="trailing" id="dmh-EL-OVO"/>
+                <constraint firstAttribute="bottom" secondItem="Dxd-Kj-cUL" secondAttribute="bottom" constant="5" id="drG-4F-PIS"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="intrinsicView" destination="aeP-Xu-wJN" id="f5q-T5-dHB"/>
                 <outlet property="priceLabel" destination="d5K-gU-YOE" id="fyk-ul-7e3"/>
                 <outlet property="shortDescriptionLabel" destination="Fe9-Vn-m6J" id="sSs-MY-omL"/>
                 <outlet property="subtitleLabel" destination="ATg-Fg-cxg" id="Xp1-Mf-bc7"/>

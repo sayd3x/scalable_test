@@ -8,12 +8,12 @@
 import RxCocoa
 
 struct AssetDetailsSection {
-    let header: AssetDetailsHeaderViewModel
+    let header: AssetDetailsHeaderViewModel?
     let items: [AssetDetailsItem]
 }
 
 protocol AssetDetailsViewModel {
-    var inputTitle: String? { get }
+    var inputTitle: Driver<String?> { get }
     var inputSection: Driver<AssetDetailsSection> { get }
 
     var outputEvent: PublishRelay<AssetDetailsEvent> { get }

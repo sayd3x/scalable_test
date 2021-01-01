@@ -26,9 +26,34 @@ class AssetDetailsDefaultPresenter: AssetDetailsPresenter.Rx {
     private let interactor: AssetDetailsInteractor
     
     override func createViewModel() -> AssetDetailsViewModel? {
-        // Display asset details
+        let progress = BehaviorSubject<Bool>(value: true)
+
+        progress
+            .observeOn(MainScheduler.asyncInstance)
+            .asDriver(onErrorJustReturn: false)
+            .drive(onNext: { [unowned self] show in
+                self.router?.assetDetailsShowProgressActivity(show)
+            })
+            .disposed(by: disposeBag)
         
-        let details = interactor.observeAssetDetails().share(replay: 1)
+        // Display asset details
+        let materializedDetails = interactor.observeAssetDetails().materialize().share(replay: 1)
+        
+        materializedDetails.map{ $0.error }
+            .asDriver(onErrorJustReturn: nil)
+            .filter{ $0 != nil }
+            .map{ $0! }
+            .drive(onNext: { [unowned self] error in
+                self.router?.assetDetailsShowAlert(error)
+            })
+            .disposed(by: disposeBag)
+            
+
+        let details = materializedDetails.map{ $0.element ?? nil }
+        
+        details.map{ _ in false }
+            .bind(to: progress)
+            .disposed(by: disposeBag)
         
         let descriptionItems = details
             .map{ $0?.projectDetails }
@@ -48,7 +73,7 @@ class AssetDetailsDefaultPresenter: AssetDetailsPresenter.Rx {
         let headerItem = details
             .map{ details in
                 AssetDetailsHeaderViewModelSource(inputTitle: details?.name,
-                                                  inputPrice: details?.usdPrice?.shortPrice.map{ "$\($0)" },
+                                                  inputPrice: details?.usdPrice?.shortPriceUsd,
                                                   inputShortDescription: details?.tagline)
             }
         
@@ -75,6 +100,7 @@ class AssetDetailsDefaultPresenter: AssetDetailsPresenter.Rx {
                 self.router?.assetDetailsOpenUrl(urlString)
             })
             .disposed(by: disposeBag)
+        
         
         return ViewModelSource(inputTitle: masterSource.title.asDriver(onErrorJustReturn: nil),
                                inputSection: masterSource.section.asDriver(onErrorJustReturn: AssetDetailsSection(header: nil, items: [])),

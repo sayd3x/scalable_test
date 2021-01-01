@@ -11,17 +11,25 @@ import Moya
 
 extension Response {
     func asMessariResponseWithData<T: MessariData & Decodable>(_ type: T.Type) throws -> MessariResponse<T> {
+        let response = try self.map(MessariResponse<T>.self)
         guard statusCode == 200 else {
-            throw MessariError.serverResponse(try self.map(MessariErrorResponse.self))
+            if let status = response.status {
+                throw MessariError.serverResponse(status)
+            }
+            throw MessariError.unknownError
         }
-        return try self.map(MessariResponse<T>.self)
+        return response
     }
     
     func asMessariResponseWithData<T: Sequence & Decodable>(_ type: T.Type) throws -> MessariResponse<T> where T.Element: MessariData {
+        let response = try self.map(MessariResponse<T>.self)
         guard statusCode == 200 else {
-            throw MessariError.serverResponse(try self.map(MessariErrorResponse.self))
+            if let status = response.status {
+                throw MessariError.serverResponse(status)
+            }
+            throw MessariError.unknownError
         }
-        return try self.map(MessariResponse<T>.self)
+        return response
     }
 }
 

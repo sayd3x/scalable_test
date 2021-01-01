@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Moya
 
 class DefaultAssetDetailsModule: Module {
     
@@ -13,6 +14,16 @@ class DefaultAssetDetailsModule: Module {
 
 extension DefaultAssetDetailsModule: AssetDetailsModule {
     func createAssetDetailsInteractorsFactory(assetId: String) throws -> AssetDetailsInteractorsFactory {
-        return AssetDetailsDefaultInteractorsFactory(assetId: assetId)
+        let plugins: [PluginType] = [
+            NetworkLoggerPlugin(configuration: .init(logOptions: .verbose))
+        ]
+        let provider = MoyaProvider<AssetDetailsMessariNetworkApi>(plugins: plugins)
+        
+        
+        let assetDetailsRepository = AssetDetailsMessariRepository(provider: provider,
+                                                                   baseURL: URL(string: "https://data.messari.io")!)
+        
+        return AssetDetailsDefaultInteractorsFactory(repository: assetDetailsRepository,
+                                                     assetId: assetId)
     }
 }

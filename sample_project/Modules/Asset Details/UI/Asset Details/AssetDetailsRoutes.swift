@@ -9,4 +9,5 @@ import Foundation
 
 typealias AssetDetailsRoutes =
     AssetDetailsAlertRoute &
-    AssetDetailsUrlRoute
+    AssetDetailsUrlRoute &
+    AssetDetailsProgressActivityRoute

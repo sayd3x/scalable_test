@@ -13,6 +13,7 @@ struct AssetDetailsLink {
 }
 
 struct AssetDetailsAsset {
+    var id: String?
     var name: String?
     var symbol: String?
     var usdPrice: Decimal?

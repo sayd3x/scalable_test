@@ -15,8 +15,16 @@ class AssetDetailsDescriptionTableViewCell: TableViewCell, NibLoadableView, Pres
     override func didAttachViewModel() {
         super.didAttachViewModel()
         
-        descriptionTextView.text = viewModel?.inputDescription
-        
+        //descriptionTextView.text =
+        let data = viewModel?.inputDescription?.data(using: .utf8)
+        let attributedText = data.map{ try? NSAttributedString(data: $0, options: [.documentType : NSAttributedString.DocumentType.html], documentAttributes: nil) } ?? nil
+
+        if attributedText != nil {
+            descriptionTextView.attributedText = attributedText
+        } else {
+            descriptionTextView.text = viewModel?.inputDescription
+        }
+                
         setNeedsLayout()
     }
 }

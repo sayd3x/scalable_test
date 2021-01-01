@@ -41,7 +41,6 @@ class CryptoAssetsDefaultPresenter: CryptoAssetsPresenter.Rx {
         
         masterSource.event
             .filter{ $0.bare == .fetchMore }
-            .debug()
             .do(onNext: { [unowned self] _ in
                 masterSource.lastItem.onNext(.pageLoading)
             })

@@ -85,9 +85,9 @@ extension CryptoAssetsViewController: UITableViewDelegate {
         case .pageLoadingError:
             return 80
         case .pageLoadingTrigger:
-            return 50
+            return 80
         case .pageLoading:
-            return 50
+            return 80
         }
 
     }
@@ -97,7 +97,9 @@ extension CryptoAssetsViewController: UITableViewDelegate {
         switch item {
         case .pageLoadingTrigger:
             // trigger update
-            viewModel?.outputEvent.accept(.bare(.fetchMore))
+            DispatchQueue.main.async {
+                self.viewModel?.outputEvent.accept(.bare(.fetchMore))
+            }
             break
         default:
             break

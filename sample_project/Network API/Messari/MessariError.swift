@@ -8,7 +8,8 @@
 import Foundation
 
 enum MessariError {
-    case serverResponse(MessariErrorResponse)
+    case serverResponse(MessariStatus)
+    case unknownError
 }
 
 extension MessariError: LocalizedError {
@@ -16,6 +17,8 @@ extension MessariError: LocalizedError {
         switch self {
         case .serverResponse(let response):
             return response.errorMessage
+        case .unknownError:
+            return "Messari error"
         }
     }
 }

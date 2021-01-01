@@ -8,11 +8,13 @@
 import Foundation
 
 struct AssetDetailsDefaultInteractorsFactory {
+    let repository: AssetDetailsRepository
     let assetId: String
 }
 
 extension AssetDetailsDefaultInteractorsFactory: AssetDetailsInteractorsFactory {
     func createAssetDetailsInteractor() throws -> AssetDetailsInteractor {
-        return AssetDetailsMockedInteractor()
+        return AssetDetailsRepositoryInteractor(repository: repository,
+                                                assetId: assetId)
     }
 }

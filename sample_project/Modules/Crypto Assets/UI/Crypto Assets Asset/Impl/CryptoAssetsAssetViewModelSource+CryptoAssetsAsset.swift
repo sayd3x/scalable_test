@@ -11,6 +11,6 @@ extension CryptoAssetsAssetViewModelSource {
     init(_ asset: CryptoAssetsAsset) {
         self.init(inputName: asset.name,
                   inputSymbolName: asset.symbol,
-                  inputPrice: asset.usdPrice?.shortPrice.map{ "$\($0)" })
+                  inputPrice: asset.usdPrice?.shortPriceUsd)
     }
 }

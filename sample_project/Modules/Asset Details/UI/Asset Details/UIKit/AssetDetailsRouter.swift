@@ -7,6 +7,8 @@
 
 import Foundation
 
-final class AssetDetailsRouter: UIKitRouter<AssetDetailsViewController> {
+final class AssetDetailsRouter: UIKitRouter<AssetDetailsViewController>,
+                                AlertRoute,
+                                AssetDetailsRoutes {
     
 }

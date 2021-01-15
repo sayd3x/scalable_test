@@ -28,9 +28,9 @@ class PresenterConfigurator<ViewModel,Router>: PresenterConfiguration {
         activeConfiguration = nil
 
         configuration.presenter?.didAttachWithRouter(configuration.router)
-        configuration.presentable?.didAttachViewModel()
-        
         activeConfiguration = configuration
+        
+        configuration.presentable?.didAttachViewModel()
     }
 }
 

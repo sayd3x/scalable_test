@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9DC93E2325B21835004990FD /* ModulesRepositoryRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC93E2225B21835004990FD /* ModulesRepositoryRoutable.swift */; };
+		9DC93E2725B21852004990FD /* NoRouterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC93E2525B21852004990FD /* NoRouterPresenter.swift */; };
+		9DC93E2825B21852004990FD /* NoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC93E2625B21852004990FD /* NoRouter.swift */; };
+		9DC93E3125B21872004990FD /* Router+SegueSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC93E2B25B21872004990FD /* Router+SegueSender.swift */; };
+		9DC93E3225B21872004990FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC93E2C25B21872004990FD /* ViewController.swift */; };
+		9DC93E3325B21872004990FD /* TableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC93E2D25B21872004990FD /* TableViewHeaderFooterView.swift */; };
+		9DC93E3425B21872004990FD /* SegueSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC93E2E25B21872004990FD /* SegueSender.swift */; };
+		9DC93E3525B21872004990FD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC93E2F25B21872004990FD /* TableViewCell.swift */; };
+		9DC93E4825B218E4004990FD /* UITableView+NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC93E3C25B218E4004990FD /* UITableView+NibLoadableView.swift */; };
+		9DC93E4925B218E4004990FD /* UITableView+CellDynamicHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC93E3D25B218E4004990FD /* UITableView+CellDynamicHeight.swift */; };
+		9DC93E4A25B218E4004990FD /* ReusableView+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC93E3E25B218E4004990FD /* ReusableView+UIView.swift */; };
+		9DC93E4B25B218E4004990FD /* UITableViewHeaderFooterView+ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC93E3F25B218E4004990FD /* UITableViewHeaderFooterView+ReusableView.swift */; };
+		9DC93E4C25B218E4004990FD /* UITableViewCell+ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC93E4025B218E4004990FD /* UITableViewCell+ReusableView.swift */; };
+		9DC93E4D25B218E4004990FD /* NibLoadableView+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC93E4125B218E4004990FD /* NibLoadableView+UIView.swift */; };
+		9DC93E4E25B218E4004990FD /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC93E4225B218E4004990FD /* NibLoadableView.swift */; };
+		9DC93E4F25B218E4004990FD /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC93E4325B218E4004990FD /* ReusableView.swift */; };
+		9DC93E5025B218E4004990FD /* AlertRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC93E4525B218E4004990FD /* AlertRoute.swift */; };
+		9DC93E5125B218E4004990FD /* AlertRoute+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC93E4725B218E4004990FD /* AlertRoute+UIViewController.swift */; };
 		9DEA0006259282860037F34D /* ModulesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA0005259282860037F34D /* ModulesRepository.swift */; };
 		9DEA000A259282C80037F34D /* RepositoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA0009259282C80037F34D /* RepositoryModule.swift */; };
 		9DEA000E259283480037F34D /* DefaultRepositoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA000D259283480037F34D /* DefaultRepositoryModule.swift */; };
@@ -25,7 +43,6 @@
 		9DEAFFD7259255DF0037F34D /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAFFD6259255DF0037F34D /* Presentable.swift */; };
 		9DEAFFDA259258D30037F34D /* PresenterConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAFFD9259258D30037F34D /* PresenterConfiguration.swift */; };
 		9DEAFFE125925C210037F34D /* PresenterConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAFFE025925C210037F34D /* PresenterConfigurator.swift */; };
-		9DEAFFE6259275FD0037F34D /* UIViewController+Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAFFE5259275FD0037F34D /* UIViewController+Presentable.swift */; };
 		9DEAFFEC259276740037F34D /* UIView+Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAFFEB259276740037F34D /* UIView+Presentable.swift */; };
 		9DEAFFF12592777B0037F34D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAFFF02592777B0037F34D /* Router.swift */; };
 		9DEAFFF425927F8C0037F34D /* UIKitRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEAFFF325927F8C0037F34D /* UIKitRouter.swift */; };
@@ -35,6 +52,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9DC93E2225B21835004990FD /* ModulesRepositoryRoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModulesRepositoryRoutable.swift; sourceTree = "<group>"; };
+		9DC93E2525B21852004990FD /* NoRouterPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoRouterPresenter.swift; sourceTree = "<group>"; };
+		9DC93E2625B21852004990FD /* NoRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoRouter.swift; sourceTree = "<group>"; };
+		9DC93E2B25B21872004990FD /* Router+SegueSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Router+SegueSender.swift"; sourceTree = "<group>"; };
+		9DC93E2C25B21872004990FD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9DC93E2D25B21872004990FD /* TableViewHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewHeaderFooterView.swift; sourceTree = "<group>"; };
+		9DC93E2E25B21872004990FD /* SegueSender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueSender.swift; sourceTree = "<group>"; };
+		9DC93E2F25B21872004990FD /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		9DC93E3C25B218E4004990FD /* UITableView+NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+NibLoadableView.swift"; sourceTree = "<group>"; };
+		9DC93E3D25B218E4004990FD /* UITableView+CellDynamicHeight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+CellDynamicHeight.swift"; sourceTree = "<group>"; };
+		9DC93E3E25B218E4004990FD /* ReusableView+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ReusableView+UIView.swift"; sourceTree = "<group>"; };
+		9DC93E3F25B218E4004990FD /* UITableViewHeaderFooterView+ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewHeaderFooterView+ReusableView.swift"; sourceTree = "<group>"; };
+		9DC93E4025B218E4004990FD /* UITableViewCell+ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+ReusableView.swift"; sourceTree = "<group>"; };
+		9DC93E4125B218E4004990FD /* NibLoadableView+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NibLoadableView+UIView.swift"; sourceTree = "<group>"; };
+		9DC93E4225B218E4004990FD /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
+		9DC93E4325B218E4004990FD /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		9DC93E4525B218E4004990FD /* AlertRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertRoute.swift; sourceTree = "<group>"; };
+		9DC93E4725B218E4004990FD /* AlertRoute+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlertRoute+UIViewController.swift"; sourceTree = "<group>"; };
 		9DEA0005259282860037F34D /* ModulesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesRepository.swift; sourceTree = "<group>"; };
 		9DEA0009259282C80037F34D /* RepositoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModule.swift; sourceTree = "<group>"; };
 		9DEA000D259283480037F34D /* DefaultRepositoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRepositoryModule.swift; sourceTree = "<group>"; };
@@ -55,7 +90,6 @@
 		9DEAFFD6259255DF0037F34D /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		9DEAFFD9259258D30037F34D /* PresenterConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterConfiguration.swift; sourceTree = "<group>"; };
 		9DEAFFE025925C210037F34D /* PresenterConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterConfigurator.swift; sourceTree = "<group>"; };
-		9DEAFFE5259275FD0037F34D /* UIViewController+Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Presentable.swift"; sourceTree = "<group>"; };
 		9DEAFFEB259276740037F34D /* UIView+Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Presentable.swift"; sourceTree = "<group>"; };
 		9DEAFFF02592777B0037F34D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9DEAFFF325927F8C0037F34D /* UIKitRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitRouter.swift; sourceTree = "<group>"; };
@@ -75,6 +109,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9DC93E3925B218E4004990FD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9DC93E3A25B218E4004990FD /* Dynamic TableView */,
+				9DC93E4425B218E4004990FD /* MVVM */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9DC93E3A25B218E4004990FD /* Dynamic TableView */ = {
+			isa = PBXGroup;
+			children = (
+				9DC93E3B25B218E4004990FD /* UIKit */,
+				9DC93E4225B218E4004990FD /* NibLoadableView.swift */,
+				9DC93E4325B218E4004990FD /* ReusableView.swift */,
+			);
+			path = "Dynamic TableView";
+			sourceTree = "<group>";
+		};
+		9DC93E3B25B218E4004990FD /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				9DC93E3C25B218E4004990FD /* UITableView+NibLoadableView.swift */,
+				9DC93E3D25B218E4004990FD /* UITableView+CellDynamicHeight.swift */,
+				9DC93E3E25B218E4004990FD /* ReusableView+UIView.swift */,
+				9DC93E3F25B218E4004990FD /* UITableViewHeaderFooterView+ReusableView.swift */,
+				9DC93E4025B218E4004990FD /* UITableViewCell+ReusableView.swift */,
+				9DC93E4125B218E4004990FD /* NibLoadableView+UIView.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		9DC93E4425B218E4004990FD /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				9DC93E4625B218E4004990FD /* UIKit */,
+				9DC93E4525B218E4004990FD /* AlertRoute.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		9DC93E4625B218E4004990FD /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				9DC93E4725B218E4004990FD /* AlertRoute+UIViewController.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		9DEA00012592820F0037F34D /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +172,7 @@
 				9DEA000C259282F50037F34D /* Impl */,
 				9DEA0005259282860037F34D /* ModulesRepository.swift */,
 				9DEA0009259282C80037F34D /* RepositoryModule.swift */,
+				9DC93E2225B21835004990FD /* ModulesRepositoryRoutable.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -177,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				9DEAFF9925923D340037F34D /* MVVM */,
+				9DC93E3925B218E4004990FD /* Extensions */,
 				9DEAFFF62592801B0037F34D /* Module */,
 				9DEA00012592820F0037F34D /* Modules */,
 				9DEA00392592A01A0037F34D /* System */,
@@ -195,6 +280,8 @@
 				9DEAFFE025925C210037F34D /* PresenterConfigurator.swift */,
 				9DEAFFC9259240000037F34D /* PresenterCompatible.swift */,
 				9DEAFFF02592777B0037F34D /* Router.swift */,
+				9DC93E2625B21852004990FD /* NoRouter.swift */,
+				9DC93E2525B21852004990FD /* NoRouterPresenter.swift */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -202,7 +289,11 @@
 		9DEAFFE4259275E70037F34D /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				9DEAFFE5259275FD0037F34D /* UIViewController+Presentable.swift */,
+				9DC93E2B25B21872004990FD /* Router+SegueSender.swift */,
+				9DC93E2E25B21872004990FD /* SegueSender.swift */,
+				9DC93E2F25B21872004990FD /* TableViewCell.swift */,
+				9DC93E2D25B21872004990FD /* TableViewHeaderFooterView.swift */,
+				9DC93E2C25B21872004990FD /* ViewController.swift */,
 				9DEAFFEB259276740037F34D /* UIView+Presentable.swift */,
 				9DEAFFF325927F8C0037F34D /* UIKitRouter.swift */,
 			);
@@ -290,28 +381,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DEAFFE6259275FD0037F34D /* UIViewController+Presentable.swift in Sources */,
+				9DC93E4825B218E4004990FD /* UITableView+NibLoadableView.swift in Sources */,
+				9DC93E2725B21852004990FD /* NoRouterPresenter.swift in Sources */,
 				9DEAFFFC2592803B0037F34D /* UIModule.swift in Sources */,
+				9DC93E3425B21872004990FD /* SegueSender.swift in Sources */,
 				9DEAFFEC259276740037F34D /* UIView+Presentable.swift in Sources */,
 				9DEAFFDA259258D30037F34D /* PresenterConfiguration.swift in Sources */,
+				9DC93E4A25B218E4004990FD /* ReusableView+UIView.swift in Sources */,
+				9DC93E4F25B218E4004990FD /* ReusableView.swift in Sources */,
+				9DC93E3325B21872004990FD /* TableViewHeaderFooterView.swift in Sources */,
+				9DC93E4D25B218E4004990FD /* NibLoadableView+UIView.swift in Sources */,
 				9DEA000E259283480037F34D /* DefaultRepositoryModule.swift in Sources */,
 				9DEAFFFF259280490037F34D /* RootModule.swift in Sources */,
 				9DEA0027259292030037F34D /* LoadingScreenRouter.swift in Sources */,
+				9DC93E4E25B218E4004990FD /* NibLoadableView.swift in Sources */,
 				9DEA001F25928D640037F34D /* LoadingScreenViewController.swift in Sources */,
 				9DEAFFF12592777B0037F34D /* Router.swift in Sources */,
 				9DEAFFD325924FC30037F34D /* BasePresenter.swift in Sources */,
 				9DEAFF8425923CEB0037F34D /* AppDelegate.swift in Sources */,
 				9DEA000A259282C80037F34D /* RepositoryModule.swift in Sources */,
+				9DC93E2825B21852004990FD /* NoRouter.swift in Sources */,
+				9DC93E3525B21872004990FD /* TableViewCell.swift in Sources */,
 				9DEAFF9B25923D540037F34D /* Presenter.swift in Sources */,
 				9DEA0006259282860037F34D /* ModulesRepository.swift in Sources */,
 				9DEA0033259293F50037F34D /* LoadingScreenMainRoute+RootModuleRoutable.swift in Sources */,
 				9DEAFFCA259240000037F34D /* PresenterCompatible.swift in Sources */,
 				9DEAFFE125925C210037F34D /* PresenterConfigurator.swift in Sources */,
+				9DC93E5125B218E4004990FD /* AlertRoute+UIViewController.swift in Sources */,
+				9DC93E3125B21872004990FD /* Router+SegueSender.swift in Sources */,
 				9DEA002E259292B80037F34D /* LoadingScreenMainRoute.swift in Sources */,
+				9DC93E4925B218E4004990FD /* UITableView+CellDynamicHeight.swift in Sources */,
+				9DC93E3225B21872004990FD /* ViewController.swift in Sources */,
 				9DEAFFF82592802D0037F34D /* Module.swift in Sources */,
+				9DC93E4B25B218E4004990FD /* UITableViewHeaderFooterView+ReusableView.swift in Sources */,
+				9DC93E2325B21835004990FD /* ModulesRepositoryRoutable.swift in Sources */,
 				9DEA002225928F7B0037F34D /* RootModuleRoutable.swift in Sources */,
 				9DEAFFF425927F8C0037F34D /* UIKitRouter.swift in Sources */,
 				9DEAFFD7259255DF0037F34D /* Presentable.swift in Sources */,
+				9DC93E5025B218E4004990FD /* AlertRoute.swift in Sources */,
+				9DC93E4C25B218E4004990FD /* UITableViewCell+ReusableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

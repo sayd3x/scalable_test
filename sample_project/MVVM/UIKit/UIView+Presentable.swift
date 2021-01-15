@@ -1,5 +1,5 @@
 //
-//  UIView+Presentable.swift
+//  View.swift
 //  sample_project
 //
 //  Created by Konstantin Dorogan on 22.12.2020.
@@ -7,6 +7,6 @@
 
 import UIKit
 
-extension UIView: Presentable {
+class View: UIView, Presentable {
     func didAttachViewModel() {}
 }

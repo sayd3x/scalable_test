@@ -6,11 +6,9 @@
 //
 
 import Foundation
-import RxCocoa
 
 protocol CryptoAssetsViewModel {
-    var inputItems: Driver<[CryptoAssetsItem]> { get }
+    func observeItems(_ observer: @escaping (ObservableEvent<[CryptoAssetsItem]>) -> Void) -> Cancelable
     
-    var outputEvent: PublishRelay<CryptoAssetsEvent> { get }
+    func onEvent(_ event: CryptoAssetsEvent)
 }
-

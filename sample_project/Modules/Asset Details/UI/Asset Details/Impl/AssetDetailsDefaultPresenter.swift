@@ -7,7 +7,7 @@
 
 import Foundation
 import RxSwift
-import RxCocoa
+import RxRelay
 
 fileprivate struct MasterSource {
     let title = BehaviorSubject<String?>(value: nil)
@@ -16,9 +16,25 @@ fileprivate struct MasterSource {
 }
 
 fileprivate struct ViewModelSource: AssetDetailsViewModel {
-    var inputTitle: Driver<String?>
-    var inputSection: Driver<AssetDetailsSection>
+    var inputTitle: Observable<String?>
+    var inputSection: Observable<AssetDetailsSection?>
     var outputEvent: PublishRelay<AssetDetailsEvent>
+    
+    func observeTitle(_ observer: @escaping (ObservableEvent<String?>) -> Void) -> Cancelable {
+        return inputTitle.subscribe { event in
+            observer(event.observableEvent)
+        }.cancelable
+    }
+    
+    func observeSection(_ observer: @escaping (ObservableEvent<AssetDetailsSection?>) -> Void) -> Cancelable {
+        return inputSection.subscribe { event in
+            observer(event.observableEvent)
+        }.cancelable
+    }
+    
+    func onEvent(_ event: AssetDetailsEvent) {
+        outputEvent.accept(event)
+    }
 }
 
 class AssetDetailsDefaultPresenter: AssetDetailsPresenter.Rx {
@@ -102,8 +118,8 @@ class AssetDetailsDefaultPresenter: AssetDetailsPresenter.Rx {
             .disposed(by: disposeBag)
         
         
-        return ViewModelSource(inputTitle: masterSource.title.asDriver(onErrorJustReturn: nil),
-                               inputSection: masterSource.section.asDriver(onErrorJustReturn: AssetDetailsSection(header: nil, items: [])),
+        return ViewModelSource(inputTitle: masterSource.title,
+                               inputSection: masterSource.section.map{ AssetDetailsSection?($0)},
                                outputEvent: masterSource.event)
     }
     

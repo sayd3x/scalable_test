@@ -18,6 +18,8 @@
 		9D2F1B2C259A2D4C00B2E75E /* CryptoAssetsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F1B2B259A2D4C00B2E75E /* CryptoAssetsModule.swift */; };
 		9D2F1B2E259A2D6400B2E75E /* CryptoAssetsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F1B2D259A2D6400B2E75E /* CryptoAssetsInteractor.swift */; };
 		9D2F1B32259A2D9500B2E75E /* CryptoAssetsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F1B31259A2D9500B2E75E /* CryptoAssetsViewModel.swift */; };
+		9D41D4F125C35E0C006AE488 /* Disposable+Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D41D4F025C35E0C006AE488 /* Disposable+Cancelable.swift */; };
+		9D41D4F425C361A6006AE488 /* CryptoAssetsViewModel+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D41D4F325C361A6006AE488 /* CryptoAssetsViewModel+Rx.swift */; };
 		9D543993259BA7FE00005730 /* CryptoAssetsAssetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D543992259BA7FE00005730 /* CryptoAssetsAssetTableViewCell.xib */; };
 		9D54399A259BADE700005730 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D543999259BADE700005730 /* ReusableView.swift */; };
 		9D54399F259BAF4600005730 /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D54399E259BAF4600005730 /* NibLoadableView.swift */; };
@@ -84,6 +86,10 @@
 		9D85C874259A762D0058BFE6 /* NoRouterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D85C873259A762D0058BFE6 /* NoRouterPresenter.swift */; };
 		9D85C878259A76960058BFE6 /* NoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D85C877259A76960058BFE6 /* NoRouter.swift */; };
 		9DA0632325B223D700F25CC1 /* RxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA0632225B223D700F25CC1 /* RxViewController.swift */; };
+		9DB869C425C3592100481589 /* ObservableEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB869C325C3592100481589 /* ObservableEvent.swift */; };
+		9DB869C725C3594500481589 /* Cancelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB869C625C3594500481589 /* Cancelable.swift */; };
+		9DB869CB25C3598400481589 /* ObservableEvent+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB869CA25C3598400481589 /* ObservableEvent+Rx.swift */; };
+		9DB869D025C35AD100481589 /* AssetDetailsViewModel+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB869CF25C35AD100481589 /* AssetDetailsViewModel+Rx.swift */; };
 		9DB98BFD259A515800DEE0DC /* CryptoAssetsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB98BFC259A515800DEE0DC /* CryptoAssetsEvent.swift */; };
 		9DB98C00259A516700DEE0DC /* CryptoAssetsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB98BFF259A516700DEE0DC /* CryptoAssetsItem.swift */; };
 		9DB98C04259A518A00DEE0DC /* CryptoAssetsAssetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB98C03259A518A00DEE0DC /* CryptoAssetsAssetViewModel.swift */; };
@@ -155,6 +161,8 @@
 		9D2F1B2B259A2D4C00B2E75E /* CryptoAssetsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsModule.swift; sourceTree = "<group>"; };
 		9D2F1B2D259A2D6400B2E75E /* CryptoAssetsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsInteractor.swift; sourceTree = "<group>"; };
 		9D2F1B31259A2D9500B2E75E /* CryptoAssetsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsViewModel.swift; sourceTree = "<group>"; };
+		9D41D4F025C35E0C006AE488 /* Disposable+Cancelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Disposable+Cancelable.swift"; sourceTree = "<group>"; };
+		9D41D4F325C361A6006AE488 /* CryptoAssetsViewModel+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CryptoAssetsViewModel+Rx.swift"; sourceTree = "<group>"; };
 		9D543992259BA7FE00005730 /* CryptoAssetsAssetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CryptoAssetsAssetTableViewCell.xib; sourceTree = "<group>"; };
 		9D543999259BADE700005730 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		9D54399E259BAF4600005730 /* NibLoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadableView.swift; sourceTree = "<group>"; };
@@ -221,6 +229,10 @@
 		9D85C873259A762D0058BFE6 /* NoRouterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRouterPresenter.swift; sourceTree = "<group>"; };
 		9D85C877259A76960058BFE6 /* NoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoRouter.swift; sourceTree = "<group>"; };
 		9DA0632225B223D700F25CC1 /* RxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxViewController.swift; sourceTree = "<group>"; };
+		9DB869C325C3592100481589 /* ObservableEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableEvent.swift; sourceTree = "<group>"; };
+		9DB869C625C3594500481589 /* Cancelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancelable.swift; sourceTree = "<group>"; };
+		9DB869CA25C3598400481589 /* ObservableEvent+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableEvent+Rx.swift"; sourceTree = "<group>"; };
+		9DB869CF25C35AD100481589 /* AssetDetailsViewModel+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AssetDetailsViewModel+Rx.swift"; sourceTree = "<group>"; };
 		9DB98BFC259A515800DEE0DC /* CryptoAssetsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsEvent.swift; sourceTree = "<group>"; };
 		9DB98BFF259A516700DEE0DC /* CryptoAssetsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsItem.swift; sourceTree = "<group>"; };
 		9DB98C03259A518A00DEE0DC /* CryptoAssetsAssetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetsAssetViewModel.swift; sourceTree = "<group>"; };
@@ -453,8 +465,11 @@
 		9D5439D2259BBF6300005730 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				9DB869C925C3597100481589 /* Rx */,
 				9D5439D7259BBF7700005730 /* UIKit */,
 				9D5439D3259BBF6B00005730 /* AlertRoute.swift */,
+				9DB869C325C3592100481589 /* ObservableEvent.swift */,
+				9DB869C625C3594500481589 /* Cancelable.swift */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -626,6 +641,7 @@
 		9D7F1BDC259CF4F70030650F /* Impl */ = {
 			isa = PBXGroup;
 			children = (
+				9DB869CF25C35AD100481589 /* AssetDetailsViewModel+Rx.swift */,
 				9D7F1BDD259CF5060030650F /* AssetDetailsDefaultPresenter.swift */,
 			);
 			path = Impl;
@@ -729,6 +745,15 @@
 			path = "Dynamic TableView";
 			sourceTree = "<group>";
 		};
+		9DB869C925C3597100481589 /* Rx */ = {
+			isa = PBXGroup;
+			children = (
+				9DB869CA25C3598400481589 /* ObservableEvent+Rx.swift */,
+				9D41D4F025C35E0C006AE488 /* Disposable+Cancelable.swift */,
+			);
+			path = Rx;
+			sourceTree = "<group>";
+		};
 		9DB98C02259A517A00DEE0DC /* Crypto Assets Asset */ = {
 			isa = PBXGroup;
 			children = (
@@ -755,6 +780,7 @@
 			isa = PBXGroup;
 			children = (
 				9DB98C12259A536F00DEE0DC /* CryptoAssetsDefaultPresenter.swift */,
+				9D41D4F325C361A6006AE488 /* CryptoAssetsViewModel+Rx.swift */,
 			);
 			path = Impl;
 			sourceTree = "<group>";
@@ -1083,6 +1109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DEAFFE6259275FD0037F34D /* ViewController.swift in Sources */,
+				9D41D4F125C35E0C006AE488 /* Disposable+Cancelable.swift in Sources */,
 				9D7F1C1B259D064D0030650F /* AssetDetailsDescriptionViewModelSource.swift in Sources */,
 				9D7F1C29259D127E0030650F /* AssetDetailsTableViewHeaderFooterView.swift in Sources */,
 				9DB98C28259A61F800DEE0DC /* CryptoAssetsViewController.swift in Sources */,
@@ -1125,6 +1152,7 @@
 				9DB98C04259A518A00DEE0DC /* CryptoAssetsAssetViewModel.swift in Sources */,
 				9D2F1B2E259A2D6400B2E75E /* CryptoAssetsInteractor.swift in Sources */,
 				9DC5B7D5259F7E4000590A6E /* MessariError.swift in Sources */,
+				9DB869C725C3594500481589 /* Cancelable.swift in Sources */,
 				9DEAFFFF259280490037F34D /* RootModule.swift in Sources */,
 				9D5439BD259BB84800005730 /* CryptoAssetsStubInteractor.swift in Sources */,
 				9D5898EE259D28A700AFE412 /* AssetDetailsInteractorsFactory.swift in Sources */,
@@ -1134,6 +1162,7 @@
 				9D54399F259BAF4600005730 /* NibLoadableView.swift in Sources */,
 				9D85C874259A762D0058BFE6 /* NoRouterPresenter.swift in Sources */,
 				9DFA7EC4259FC5AB003C60FE /* AssetDetailsUrlRoute+OpenUrl.swift in Sources */,
+				9DB869D025C35AD100481589 /* AssetDetailsViewModel+Rx.swift in Sources */,
 				9DEA001F25928D640037F34D /* LoadingScreenViewController.swift in Sources */,
 				9D7F1BB9259BE3070030650F /* CryptoAssetsPageLoadingErrorViewModel.swift in Sources */,
 				9D7F1BDE259CF5060030650F /* AssetDetailsDefaultPresenter.swift in Sources */,
@@ -1189,6 +1218,8 @@
 				9D589901259D2DC900AFE412 /* SegueSender.swift in Sources */,
 				9DFA7ED4259FCB95003C60FE /* AssetDetailsProgressActivityRoute.swift in Sources */,
 				9D7F1C26259D124D0030650F /* TableViewHeaderFooterView.swift in Sources */,
+				9DB869C425C3592100481589 /* ObservableEvent.swift in Sources */,
+				9D41D4F425C361A6006AE488 /* CryptoAssetsViewModel+Rx.swift in Sources */,
 				9DEAFFF425927F8C0037F34D /* UIKitRouter.swift in Sources */,
 				9D5439C4259BB99F00005730 /* DefaultCryptoAssetsModule.swift in Sources */,
 				9D7F1BF5259CF8630030650F /* AssetDetailsHeaderViewModel.swift in Sources */,
@@ -1199,6 +1230,7 @@
 				9D589910259D331800AFE412 /* AssetDetailsRouter.swift in Sources */,
 				9DC6BDCA259D2080004210E0 /* AssetDetailsTimeSeries.swift in Sources */,
 				9D5439D4259BBF6B00005730 /* AlertRoute.swift in Sources */,
+				9DB869CB25C3598400481589 /* ObservableEvent+Rx.swift in Sources */,
 				9D7F1BD9259CF4DA0030650F /* AssetDetailsEvent.swift in Sources */,
 				9DC08094259FB0710049D653 /* AssetDetailsProfileObject.swift in Sources */,
 				9D7F1BFC259CFA260030650F /* AssetDetailsHeaderViewModelSource.swift in Sources */,

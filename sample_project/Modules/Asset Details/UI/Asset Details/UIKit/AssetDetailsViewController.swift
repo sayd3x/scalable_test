@@ -44,12 +44,13 @@ class AssetDetailsViewController: RxViewController, PresenterCompatible {
         tableView.register(AssetDetailsTableViewHeaderFooterView.self)
         
         viewModel?.inputSection
-            .map{ $0.header }
+            .map{ $0?.header }
             .drive(headerModel)
             .disposed(by: disposeBag)
         
         viewModel?.inputSection
-            .map{ $0.items }
+            .filter{ $0 != nil }
+            .map{ $0!.items }
             .drive(tableView.rx.items) { (tableView, row, element) in
                 switch element {
                 case .description(let model):
@@ -70,7 +71,7 @@ class AssetDetailsViewController: RxViewController, PresenterCompatible {
                    tableView.rx.modelSelected(AssetDetailsItem.self).asDriver())
             .drive(onNext: { [unowned self] index, item in
                 self.tableView.deselectRow(at: index, animated: false)
-                self.viewModel?.outputEvent.accept(.selectedItem(item))
+                self.viewModel?.onEvent(.selectedItem(item))
             })
             .disposed(by: disposeBag)
     }

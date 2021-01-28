@@ -67,7 +67,7 @@ class CryptoAssetsViewController: RxViewController, PresenterCompatible {
                    tableView.rx.modelSelected(CryptoAssetsItem.self).asDriver())
             .drive(onNext: { [unowned self] index, item in
                 self.tableView.deselectRow(at: index, animated: false)
-                self.viewModel?.outputEvent.accept(.selectedItem(item))
+                self.viewModel?.onEvent(.selectedItem(item))
             })
             .disposed(by: disposeBag)
     }
@@ -98,7 +98,7 @@ extension CryptoAssetsViewController: UITableViewDelegate {
         case .pageLoadingTrigger:
             // trigger update
             DispatchQueue.main.async {
-                self.viewModel?.outputEvent.accept(.bare(.fetchMore))
+                self.viewModel?.onEvent(.bare(.fetchMore))
             }
             break
         default:

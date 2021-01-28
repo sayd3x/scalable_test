@@ -16,8 +16,19 @@ fileprivate struct MasterSource {
 }
 
 fileprivate struct ViewModelSource: CryptoAssetsViewModel {
-    let inputItems: Driver<[CryptoAssetsItem]>
+    let inputItems: Observable<[CryptoAssetsItem]>
     let outputEvent: PublishRelay<CryptoAssetsEvent>
+    
+    func observeItems(_ observer: @escaping (ObservableEvent<[CryptoAssetsItem]>) -> Void) -> Cancelable {
+        return inputItems.subscribe { event in
+            observer(event.observableEvent)
+        }.cancelable
+    }
+    
+    func onEvent(_ event: CryptoAssetsEvent) {
+        outputEvent.accept(event)
+    }
+
 }
 
 class CryptoAssetsDefaultPresenter: CryptoAssetsPresenter.Rx {
@@ -85,7 +96,7 @@ class CryptoAssetsDefaultPresenter: CryptoAssetsPresenter.Rx {
             .disposed(by: disposeBag)
         
         
-        return ViewModelSource(inputItems: masterSource.items.asDriver(onErrorJustReturn: []),
+        return ViewModelSource(inputItems: masterSource.items,
                                outputEvent: masterSource.event)
     }
     

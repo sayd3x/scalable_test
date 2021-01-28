@@ -13,8 +13,8 @@ struct AssetDetailsSection {
 }
 
 protocol AssetDetailsViewModel {
-    var inputTitle: Driver<String?> { get }
-    var inputSection: Driver<AssetDetailsSection> { get }
-
-    var outputEvent: PublishRelay<AssetDetailsEvent> { get }
+    func observeTitle(_ observer: @escaping (ObservableEvent<String?>) -> Void) -> Cancelable
+    func observeSection(_ observer: @escaping (ObservableEvent<AssetDetailsSection?>) -> Void) -> Cancelable
+    
+    func onEvent(_ event: AssetDetailsEvent)
 }

@@ -13,10 +13,9 @@ import RxSwift
 struct AssetDetailsMessariRepository {
     let provider: MoyaProvider<AssetDetailsMessariNetworkApi>
     let baseURL: URL
-}
-
-extension AssetDetailsMessariRepository: AssetDetailsRepository {
-    func assetDetailsGetAssetMetrics(_ assetId: String) -> Single<AssetDetailsAssetObject> {
+    
+    
+    private func _assetDetailsGetAssetMetrics(_ assetId: String) -> Single<AssetDetailsAssetObject> {
         let apiTarget = AssetDetailsMessariNetworkApi(baseURL: baseURL,
                                                       target: .getMetrics(assetId))
         
@@ -30,7 +29,7 @@ extension AssetDetailsMessariRepository: AssetDetailsRepository {
             }
     }
     
-    func assetDetailsGetProfileForAsset(_ assetId: String) -> Single<AssetDetailsProfileObject> {
+    private func _assetDetailsGetProfileForAsset(_ assetId: String) -> Single<AssetDetailsProfileObject> {
         let apiTarget = AssetDetailsMessariNetworkApi(baseURL: baseURL,
                                                       target: .getProfile(assetId))
         
@@ -43,5 +42,18 @@ extension AssetDetailsMessariRepository: AssetDetailsRepository {
                                             links: $0.officialLinks?.map{ AssetDetailsAssetLinkObject(name: $0.name, url: $0.link) })
             }
     }
+}
 
+extension AssetDetailsMessariRepository: AssetDetailsRepository {
+    func assetDetailsGetAssetMetrics(_ assetId: String, observer: @escaping (ObservableEvent<AssetDetailsAssetObject>) -> Void) -> Cancelable {
+        return _assetDetailsGetAssetMetrics(assetId)
+            .asObservable()
+            .subscribeWithObserver(observer)
+    }
+    
+    func assetDetailsGetProfileForAsset(_ assetId: String, observer: @escaping (ObservableEvent<AssetDetailsProfileObject>) -> Void) -> Cancelable {
+        return _assetDetailsGetProfileForAsset(assetId)
+            .asObservable()
+            .subscribeWithObserver(observer)
+    }
 }

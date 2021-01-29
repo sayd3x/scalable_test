@@ -9,11 +9,7 @@ import Foundation
 import RxSwift
 
 struct AssetDetailsMockedInteractor {
-    
-}
-
-extension AssetDetailsMockedInteractor: AssetDetailsInteractor {
-    func observeAssetDetails() -> Observable<AssetDetailsAsset?> {
+    private func _observeAssetDetails() -> Observable<AssetDetailsAsset?> {
         let details = AssetDetailsAsset(
             name: "Bitcoin",
             symbol: "BTC",
@@ -30,7 +26,17 @@ extension AssetDetailsMockedInteractor: AssetDetailsInteractor {
         return Observable.never().startWith(details)
     }
     
-    func assetDetailsObserveTimeSeries() -> Observable<AssetDetailsTimeSeries?> {
+    private func _assetDetailsObserveTimeSeries() -> Observable<AssetDetailsTimeSeries?> {
         .just(nil)
+    }
+}
+
+extension AssetDetailsMockedInteractor: AssetDetailsInteractor {
+    func observeAssetDetails(_ observer: @escaping (ObservableEvent<AssetDetailsAsset?>) -> Void) -> Cancelable {
+        return _observeAssetDetails().subscribeWithObserver(observer)
+    }
+    
+    func assetDetailsObserveTimeSeries(_ observer: @escaping (ObservableEvent<AssetDetailsTimeSeries?>) -> Void) -> Cancelable {
+        return _assetDetailsObserveTimeSeries().subscribeWithObserver(observer)
     }
 }

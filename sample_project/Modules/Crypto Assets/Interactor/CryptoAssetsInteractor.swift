@@ -6,9 +6,8 @@
 //
 
 import Foundation
-import RxSwift
 
 protocol CryptoAssetsInteractor {
-    func cryptoAssetsObserveAssets() -> Observable<[CryptoAssetsAsset]>
-    func cryptoAssetsFetchMore() -> Single<Void>
+    func cryptoAssetsObserveAssets(_ observer: @escaping (ObservableEvent<[CryptoAssetsAsset]>) -> Void) -> Cancelable
+    func cryptoAssetsFetchMore(_ observer: @escaping (Result<Void,Error>) -> Void) -> Cancelable
 }

@@ -6,9 +6,9 @@
 //
 
 import Foundation
-import RxSwift
 
 protocol AssetDetailsInteractor {
-    func observeAssetDetails() -> Observable<AssetDetailsAsset?>
-    func assetDetailsObserveTimeSeries() -> Observable<AssetDetailsTimeSeries?>
+    func observeAssetDetails(_ observer: @escaping (ObservableEvent<AssetDetailsAsset?>) -> Void) -> Cancelable
+    func assetDetailsObserveTimeSeries(_ observer: @escaping (ObservableEvent<AssetDetailsTimeSeries?>) -> Void) -> Cancelable
+    
 }

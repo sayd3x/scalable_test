@@ -60,16 +60,23 @@ class CryptoAssetsRepositoryInteractor {
 }
 
 extension CryptoAssetsRepositoryInteractor: CryptoAssetsInteractor {
-    func cryptoAssetsObserveAssets() -> Observable<[CryptoAssetsAsset]> {
-        return Observable.deferred{
-            self._cryptoAssetsObserveAssets()
-        }.subscribeOn(MainScheduler.instance)
+    func cryptoAssetsObserveAssets(_ observer: @escaping (ObservableEvent<[CryptoAssetsAsset]>) -> Void) -> Cancelable {
+        return _cryptoAssetsObserveAssets()
+            .subscribeOn(MainScheduler.instance)
+            .subscribeWithObserver(observer)
     }
     
-    func cryptoAssetsFetchMore() -> Single<Void> {
-        return Single.deferred{
-            self._cryptoAssetsFetchMore()
-        }.subscribeOn(MainScheduler.instance)
+    func cryptoAssetsFetchMore(_ observer: @escaping (Result<Void, Error>) -> Void) -> Cancelable {
+        return Completable.create { seal -> Disposable in
+            return self._cryptoAssetsFetchMore()
+                .subscribe { _ in
+                    seal(.completed)
+                } onError: { error in
+                    seal(.error(error))
+                }
+        }
+        .subscribeOn(MainScheduler.instance)
+        .subscribeWithObserver(observer)
     }
 }
 

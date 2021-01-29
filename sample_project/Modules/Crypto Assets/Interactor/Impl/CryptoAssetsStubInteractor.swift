@@ -9,11 +9,7 @@ import Foundation
 import RxSwift
 
 struct CryptoAssetsStubInteractor {
-    
-}
-
-extension CryptoAssetsStubInteractor: CryptoAssetsInteractor {
-    func cryptoAssetsObserveAssets() -> Observable<[CryptoAssetsAsset]> {
+    private func _cryptoAssetsObserveAssets() -> Observable<[CryptoAssetsAsset]> {
         return Observable.never().startWith([
             CryptoAssetsAsset(id: "0", name: "Bitcoin", symbol: "BTC", usdPrice: Decimal(string: "27000")),
             CryptoAssetsAsset(id: "1", name: "Ethereum", symbol: "ETH", usdPrice: Decimal(string: "724")),
@@ -39,10 +35,31 @@ extension CryptoAssetsStubInteractor: CryptoAssetsInteractor {
         ])
     }
     
-    func cryptoAssetsFetchMore() -> Single<Void> {
+    private func _cryptoAssetsFetchMore() -> Single<Void> {
         Observable.just(())
             .delay(.seconds(3), scheduler: MainScheduler.instance)
             .map{ _ in throw RxError.timeout }
             .asSingle()
+    }
+}
+
+extension CryptoAssetsStubInteractor: CryptoAssetsInteractor {
+    func cryptoAssetsObserveAssets(_ observer: @escaping (ObservableEvent<[CryptoAssetsAsset]>) -> Void) -> Cancelable {
+        return _cryptoAssetsObserveAssets()
+            .subscribeOn(MainScheduler.instance)
+            .subscribeWithObserver(observer)
+    }
+    
+    func cryptoAssetsFetchMore(_ observer: @escaping (Result<Void, Error>) -> Void) -> Cancelable {
+        return Completable.create { seal -> Disposable in
+            return self._cryptoAssetsFetchMore()
+                .subscribe { _ in
+                    seal(.completed)
+                } onError: { error in
+                    seal(.error(error))
+                }
+        }
+        .subscribeOn(MainScheduler.instance)
+        .subscribeWithObserver(observer)
     }
 }

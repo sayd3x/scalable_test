@@ -6,8 +6,7 @@
 //
 
 import Foundation
-import RxSwift
 
 protocol CryptoAssetsRepository {
-    func cryptoAssetsListAssets(page: Int, limit: Int) -> Single<[CryptoAssetsAssetObject]>
+    func cryptoAssetsListAssets(page: Int, limit: Int, observer: @escaping (ObservableEvent<[CryptoAssetsAssetObject]>) -> Void) -> Cancelable
 }

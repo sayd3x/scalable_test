@@ -16,7 +16,7 @@ struct CryptoAssetsMessariRepository {
 }
 
 extension CryptoAssetsMessariRepository: CryptoAssetsRepository {
-    func cryptoAssetsListAssets(page: Int, limit: Int) -> Single<[CryptoAssetsAssetObject]> {
+    private func _cryptoAssetsListAssets(page: Int, limit: Int) -> Single<[CryptoAssetsAssetObject]> {
         let apiTarget = CryptoAssetsMessariNetworkApi(baseURL: baseURL,
                                                       target: .listAssets(page: page, limit: limit))
         
@@ -27,5 +27,11 @@ extension CryptoAssetsMessariRepository: CryptoAssetsRepository {
                                           symbol: $0.symbol,
                                           usdPrice: $0.metrics?.marketData?.priceUsd.map{ Decimal($0) }) }
             }
+    }
+    
+    func cryptoAssetsListAssets(page: Int, limit: Int, observer: @escaping (ObservableEvent<[CryptoAssetsAssetObject]>) -> Void) -> Cancelable {
+        return _cryptoAssetsListAssets(page: page, limit: limit)
+            .asObservable()
+            .subscribeWithObserver(observer)
     }
 }

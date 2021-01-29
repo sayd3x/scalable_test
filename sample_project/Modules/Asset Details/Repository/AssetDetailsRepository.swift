@@ -6,9 +6,8 @@
 //
 
 import Foundation
-import RxSwift
 
 protocol AssetDetailsRepository {
-    func assetDetailsGetProfileForAsset(_ assetId: String) -> Single<AssetDetailsProfileObject>
-    func assetDetailsGetAssetMetrics(_ assetId: String) -> Single<AssetDetailsAssetObject>
+    func assetDetailsGetProfileForAsset(_ assetId: String, observer: @escaping (ObservableEvent<AssetDetailsProfileObject>) -> Void) -> Cancelable
+    func assetDetailsGetAssetMetrics(_ assetId: String, observer: @escaping (ObservableEvent<AssetDetailsAssetObject>) -> Void) -> Cancelable
 }

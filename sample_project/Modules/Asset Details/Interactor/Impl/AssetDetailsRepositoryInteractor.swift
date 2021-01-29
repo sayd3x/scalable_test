@@ -33,14 +33,15 @@ struct AssetDetailsRepositoryInteractor {
 }
 
 extension AssetDetailsRepositoryInteractor: AssetDetailsInteractor {
-    func observeAssetDetails() -> Observable<AssetDetailsAsset?> {
-        Observable.deferred {
-            self._observeAssetDetails()
-        }.subscribeOn(MainScheduler.instance)
+    func assetDetailsObserveTimeSeries(_ observer: @escaping (ObservableEvent<AssetDetailsTimeSeries?>) -> Void) -> Cancelable {
+        return Observable<AssetDetailsTimeSeries?>.error(AssetDetailsRepositoryInteractorError.notImplemented)
+            .subscribeWithObserver(observer)
     }
     
-    func assetDetailsObserveTimeSeries() -> Observable<AssetDetailsTimeSeries?> {
-        .error(AssetDetailsRepositoryInteractorError.notImplemented)
+    func observeAssetDetails(_ observer: @escaping (ObservableEvent<AssetDetailsAsset?>) -> Void) -> Cancelable {
+        return _observeAssetDetails()
+            .subscribeOn(MainScheduler.instance)
+            .subscribeWithObserver(observer)
     }
 }
 
